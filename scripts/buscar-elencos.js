@@ -8,7 +8,7 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-// Banco de dados de times (COMPLETO)
+// Banco de dados de times (COMPLETO - copiado do App.tsx)
 const DB_TIMES = [
   // SÉRIE A
   {nome: 'Palmeiras', id: 121},
@@ -52,6 +52,70 @@ const DB_TIMES = [
   {nome: 'Brusque', id: 1211},
   {nome: 'Guarani', id: 138},
   {nome: 'Amazonas', id: 10862},
+  // SÉRIE C e OUTROS
+  {nome: 'Náutico', id: 755},
+  {nome: 'Figueirense', id: 137},
+  {nome: 'Remo', id: 1198},
+  {nome: 'Volta Redonda', id: 7814},
+  {nome: 'Ferroviária', id: 7826},
+  {nome: 'CSA', id: 150},
+  {nome: 'ABC', id: 754},
+  {nome: 'Sampaio Corrêa', id: 155},
+  {nome: 'Confiança', id: 7772},
+  {nome: 'Ypiranga', id: 1221},
+  {nome: 'Londrina', id: 148},
+  {nome: 'São Bernardo', id: 7865},
+  {nome: 'Caxias', id: 7770},
+  {nome: 'Athletic Club', id: 13975},
+  {nome: 'Tombense', id: 2227},
+  {nome: 'Botafogo-PB', id: 1197},
+  {nome: 'Aparecidense', id: 1202},
+  {nome: 'Floresta', id: 7774},
+  {nome: 'São José-RS', id: 2232},
+  {nome: 'Ferroviário', id: 1195},
+  {nome: 'Portuguesa', id: 1214},
+  {nome: 'Brasiliense', id: 2208},
+  {nome: 'Tuna Luso', id: 15611},
+  {nome: 'Manauara', id: 18308},
+  {nome: 'Manaus', id: 2214},
+  {nome: 'Trem', id: 7868},
+  {nome: 'Humaitá', id: 10478},
+  {nome: 'Altos', id: 1203},
+  {nome: 'Imperatriz', id: 2213},
+  {nome: 'Maranhão', id: 7832},
+  {nome: 'Iguatu', id: 15505},
+  {nome: 'Tocantinópolis', id: 7878},
+  {nome: 'Parnahyba', id: 7784},
+  {nome: 'Maracanã', id: 13089},
+  {nome: 'América-RN', id: 2233},
+  {nome: 'Santa Cruz', id: 753},
+  {nome: 'Central', id: 2210},
+  {nome: 'Horizonte', id: 12297},
+  {nome: 'Treze', id: 7787},
+  {nome: 'Sousa', id: 7864},
+  {nome: 'ASA', id: 1207},
+  {nome: 'Lagarto', id: 10002},
+  {nome: 'Sergipe', id: 2224},
+  {nome: 'Juazeirense', id: 1224},
+  {nome: 'Jequié', id: 15104},
+  {nome: 'Barcelona-BA', id: 15103},
+  {nome: 'Ceilândia', id: 7771},
+  {nome: 'Luverdense', id: 752},
+  {nome: 'Mixto', id: 2215},
+  {nome: 'Goiânia', id: 10674},
+  {nome: 'Goianésia', id: 7873},
+  {nome: 'Portuguesa-RJ', id: 7835},
+  {nome: 'Água Santa', id: 10018},
+  {nome: 'Maricá', id: 14000},
+  {nome: 'Pouso Alegre', id: 13084},
+  {nome: 'Nova Iguaçu', id: 7782},
+  {nome: 'Boavista', id: 222},
+  {nome: 'Inter de Limeira', id: 1201},
+  {nome: 'Cianorte', id: 1194},
+  {nome: 'Cascavel', id: 10673},
+  {nome: 'Uberlândia', id: 1196},
+  {nome: 'Monte Azul', id: 10021},
+  {nome: 'Itabirito', id: 21165},
 ];
 
 // Função para remover acentos
@@ -239,9 +303,9 @@ async function buscarTodosElencos() {
       falhas++;
     }
 
-    // Delay de 250ms entre chamadas para respeitar rate limit
+    // Delay de 500ms entre chamadas para respeitar rate limit
     if (i < timesParaBuscar.length - 1) {
-      await delay(250);
+      await delay(500);
     }
   }
 

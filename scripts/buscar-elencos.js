@@ -160,15 +160,24 @@ async function buscarTodosElencos() {
   }
 
   const linhas = csvText.split('\n').map((l) => l.trim()).filter((l) => l);
-  const todosNomesTimes = [];
-
+  
+  // Separar em Série A e Série B
+  const serieA = [];
+  const serieB = [];
+  
+  // Pular primeira linha (cabeçalhos)
   for (let i = 1; i < linhas.length; i++) {
     const colunas = linhas[i].split(',').map((c) => c.trim());
-    if (colunas[0]) todosNomesTimes.push(colunas[0]); // Série A
-    if (colunas[1]) todosNomesTimes.push(colunas[1]); // Série B
+    if (colunas[0]) serieA.push(colunas[0]);
+    if (colunas[1]) serieB.push(colunas[1]);
   }
+  
+  // Juntar todos os times (Série A + Série B)
+  const todosNomesTimes = [...serieA, ...serieB];
 
-  console.log(`   ✅ ${todosNomesTimes.length} times encontrados na planilha\n`);
+  console.log(`   ✅ ${todosNomesTimes.length} times encontrados na planilha`);
+  console.log(`   Times da planilha:`, todosNomesTimes);
+  console.log();
 
   // 2. Match com DB_TIMES para pegar IDs
   console.log('🔍 Fazendo match com banco de dados...');
@@ -180,8 +189,12 @@ async function buscarTodosElencos() {
     for (const timeDb of DB_TIMES) {
       const dbClean = removeAccents(timeDb.nome.toLowerCase().trim());
       
+      // Match exato (mesma lógica do App.tsx)
       if (dbClean === nClean) {
-        timesParaBuscar.push(timeDb);
+        if (!timesParaBuscar.find(t => t.id === timeDb.id)) {
+          timesParaBuscar.push(timeDb);
+          console.log(`   ✅ Match: "${nomeTime}" → ${timeDb.nome} (ID: ${timeDb.id})`);
+        }
         break;
       }
     }

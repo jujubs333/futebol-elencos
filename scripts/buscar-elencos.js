@@ -59,10 +59,22 @@ function removeAccents(str) {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-// Função para fazer requisição HTTPS
-function fetchHTTPS(url, options = {}) {
+// Função para fazer requisição HTTPS com suporte a redirecionamentos
+function fetchHTTPS(url, options = {}, redirectCount = 0) {
   return new Promise((resolve, reject) => {
+    if (redirectCount > 5) {
+      return reject(new Error('Muitos redirecionamentos'));
+    }
+
     const req = https.get(url, options, (res) => {
+      // Se for redirecionamento (301, 302, 307, 308), seguir
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        console.log(`   Seguindo redirect para: ${res.headers.location}`);
+        return fetchHTTPS(res.headers.location, options, redirectCount + 1)
+          .then(resolve)
+          .catch(reject);
+      }
+
       let data = '';
       
       res.on('data', (chunk) => {
@@ -70,10 +82,16 @@ function fetchHTTPS(url, options = {}) {
       });
       
       res.on('end', () => {
-        try {
-          resolve(JSON.parse(data));
-        } catch (e) {
-          resolve(data); // Retorna como texto se não for JSON
+        // Se parecer JSON, tenta parsear
+        if (data.trim().startsWith('{') || data.trim().startsWith('[')) {
+          try {
+            resolve(JSON.parse(data));
+          } catch (e) {
+            resolve(data);
+          }
+        } else {
+          // Retorna como texto (CSV)
+          resolve(data);
         }
       });
     });

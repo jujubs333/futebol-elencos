@@ -130,22 +130,9 @@ function fetchHTTPS(url, options = {}, redirectCount = 0) {
       return reject(new Error('Muitos redirecionamentos'));
     }
 
-    console.log(`      🌐 GET ${url.substring(0, 80)}...`);
-    
     const req = https.get(url, options, (res) => {
-      console.log(`      📡 Status: ${res.statusCode}`);
-      
-      // Mostrar informações de rate limit
-      if (res.headers['x-ratelimit-requests-remaining']) {
-        console.log(`      🔢 Requests restantes: ${res.headers['x-ratelimit-requests-remaining']}`);
-      }
-      if (res.headers['x-ratelimit-requests-limit']) {
-        console.log(`      📊 Limite de requests: ${res.headers['x-ratelimit-requests-limit']}`);
-      }
-      
       // Se for redirecionamento (301, 302, 307, 308), seguir
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        console.log(`      ↪️  Redirect para: ${res.headers.location}`);
         return fetchHTTPS(res.headers.location, options, redirectCount + 1)
           .then(resolve)
           .catch(reject);
@@ -158,33 +145,22 @@ function fetchHTTPS(url, options = {}, redirectCount = 0) {
       });
       
       res.on('end', () => {
-        console.log(`      📦 Recebido: ${data.length} bytes`);
-        
         // Se parecer JSON, tenta parsear
         if (data.trim().startsWith('{') || data.trim().startsWith('[')) {
           try {
-            const parsed = JSON.parse(data);
-            console.log(`      ✅ JSON válido`);
-            resolve(parsed);
+            resolve(JSON.parse(data));
           } catch (e) {
-            console.log(`      ⚠️  Erro ao parsear JSON: ${e.message}`);
             resolve(data);
           }
         } else {
           // Retorna como texto (CSV)
-          console.log(`      📝 Retornando como texto`);
           resolve(data);
         }
       });
     });
     
-    req.on('error', (err) => {
-      console.log(`      ❌ Erro de rede: ${err.message}`);
-      reject(err);
-    });
-    
+    req.on('error', reject);
     req.setTimeout(10000, () => {
-      console.log(`      ⏱️  Timeout após 10 segundos`);
       req.destroy();
       reject(new Error('Timeout'));
     });
@@ -196,7 +172,6 @@ async function buscarElencoAPI(timeId, tentativa = 1) {
   const MAX_TENTATIVAS = 3;
   
   try {
-    console.log(`   🔍 Tentando endpoint principal...`);
     const url = `https://v3.football.api-sports.io/players/squads?team=${timeId}`;
     const data = await fetchHTTPS(url, {
       headers: {
@@ -205,13 +180,6 @@ async function buscarElencoAPI(timeId, tentativa = 1) {
       },
     });
 
-    console.log(`      🔑 Tem 'response'? ${!!data.response}`);
-    console.log(`      🔑 Tamanho response: ${data.response?.length || 0}`);
-    
-    if (data.errors) {
-      console.log(`      ⚠️  API retornou erros:`, JSON.stringify(data.errors));
-    }
-    
     if (data.response && data.response[0]?.players) {
       const jogadores = data.response[0].players.map((j) => ({
         id: j.id,
@@ -224,7 +192,6 @@ async function buscarElencoAPI(timeId, tentativa = 1) {
     }
 
     // Tentar endpoint alternativo
-    console.log(`   🔄 Tentando endpoint alternativo...`);
     const url2 = `https://v3.football.api-sports.io/players?team=${timeId}&season=2024&page=1`;
     const data2 = await fetchHTTPS(url2, {
       headers: {
@@ -232,13 +199,6 @@ async function buscarElencoAPI(timeId, tentativa = 1) {
         'x-rapidapi-key': API_KEY,
       },
     });
-
-    console.log(`      🔑 Tem 'response'? ${!!data2.response}`);
-    console.log(`      🔑 Tamanho response: ${data2.response?.length || 0}`);
-    
-    if (data2.errors) {
-      console.log(`      ⚠️  API retornou erros:`, JSON.stringify(data2.errors));
-    }
 
     if (data2.response && data2.response.length > 0) {
       const jogadores = data2.response.map((item) => ({
@@ -251,21 +211,19 @@ async function buscarElencoAPI(timeId, tentativa = 1) {
       return jogadores;
     }
 
-    console.log(`   ⚠️  Nenhum jogador encontrado em ambos endpoints`);
+    console.log(`   ⚠️  Nenhum jogador encontrado`);
     return [];
   } catch (error) {
-    console.log(`   ❌ ERRO CAPTURADO: ${error.message}`);
-    console.log(`      Stack: ${error.stack?.substring(0, 200)}`);
+    console.log(`   ❌ Erro: ${error.message}`);
     
     // Retry com backoff exponencial
     if (tentativa < MAX_TENTATIVAS) {
-      const waitTime = tentativa * 3000; // 3s, 6s
-      console.log(`   🔄 Tentativa ${tentativa + 1}/${MAX_TENTATIVAS} em ${waitTime}ms...`);
+      const waitTime = tentativa * 3000;
+      console.log(`   🔄 Retry ${tentativa + 1}/${MAX_TENTATIVAS} em ${waitTime/1000}s...`);
       await delay(waitTime);
       return buscarElencoAPI(timeId, tentativa + 1);
     }
     
-    console.log(`   ❌ Esgotadas ${MAX_TENTATIVAS} tentativas. Desistindo.`);
     return [];
   }
 }
@@ -336,35 +294,51 @@ async function buscarTodosElencos() {
 
   // 3. Buscar elencos da API
   console.log(`⚽ Buscando elencos de ${timesParaBuscar.length} times...`);
-  const pausas = Math.floor(timesParaBuscar.length / 10);
-  const tempoEstimado = Math.ceil((timesParaBuscar.length * 3 + pausas * 10) / 60);
-  console.log(`⏱️  Tempo estimado: ~${tempoEstimado} minutos (3s por time + pausas de 10s a cada 10 times)\n`);
+  console.log(`⚠️  Plano FREE: 10 requests/minuto`);
+  
+  const batchSize = 10;
+  const totalBatches = Math.ceil(timesParaBuscar.length / batchSize);
+  console.log(`📦 Dividindo em ${totalBatches} batches de ${batchSize} times`);
+  console.log(`⏱️  Tempo estimado: ~${totalBatches} minutos\n`);
+  
   const elencos = {};
   let sucessos = 0;
   let falhas = 0;
 
-  for (let i = 0; i < timesParaBuscar.length; i++) {
-    const time = timesParaBuscar[i];
-    console.log(`[${i + 1}/${timesParaBuscar.length}] ${time.nome} (ID: ${time.id})`);
-
-    const elenco = await buscarElencoAPI(time.id);
+  // Processar em batches de 10
+  for (let batch = 0; batch < totalBatches; batch++) {
+    const start = batch * batchSize;
+    const end = Math.min(start + batchSize, timesParaBuscar.length);
+    const batchTimes = timesParaBuscar.slice(start, end);
     
-    if (elenco.length > 0) {
-      elencos[time.id.toString()] = elenco;
-      sucessos++;
-    } else {
-      falhas++;
-    }
+    console.log(`\n📦 BATCH ${batch + 1}/${totalBatches} (Times ${start + 1}-${end})\n`);
+    
+    // Processar cada time do batch
+    for (let i = 0; i < batchTimes.length; i++) {
+      const time = batchTimes[i];
+      const globalIndex = start + i;
+      
+      console.log(`[${globalIndex + 1}/${timesParaBuscar.length}] ${time.nome} (ID: ${time.id})`);
 
-    // Delay entre chamadas para respeitar rate limit
-    if (i < timesParaBuscar.length - 1) {
-      // Pausa extra a cada 10 requests para evitar bloqueio
-      if ((i + 1) % 10 === 0) {
-        console.log(`\n   ⏸️  Pausa de 10 segundos após ${i + 1} requisições para evitar rate limit...\n`);
-        await delay(10000);
+      const elenco = await buscarElencoAPI(time.id);
+      
+      if (elenco.length > 0) {
+        elencos[time.id.toString()] = elenco;
+        sucessos++;
       } else {
-        await delay(3000); // 3 segundos entre cada chamada
+        falhas++;
       }
+
+      // Delay de 2s entre requests do mesmo batch
+      if (i < batchTimes.length - 1) {
+        await delay(2000);
+      }
+    }
+    
+    // Esperar 60 segundos antes do próximo batch (exceto no último)
+    if (batch < totalBatches - 1) {
+      console.log(`\n⏸️  Aguardando 60 segundos antes do próximo batch (rate limit FREE: 10 req/min)...\n`);
+      await delay(60000);
     }
   }
 
@@ -372,16 +346,6 @@ async function buscarTodosElencos() {
   console.log(`   ✅ Sucessos: ${sucessos}`);
   console.log(`   ❌ Falhas: ${falhas}`);
   console.log(`   📦 Total de times com elenco: ${Object.keys(elencos).length}`);
-  
-  // Listar times que falharam
-  if (falhas > 0) {
-    console.log(`\n❌ Times que falharam:`);
-    for (const time of timesParaBuscar) {
-      if (!elencos[time.id.toString()]) {
-        console.log(`   - ${time.nome} (ID: ${time.id})`);
-      }
-    }
-  }
 
   // 4. Salvar JSON
   console.log(`\n💾 Salvando arquivo elencos.json...`);

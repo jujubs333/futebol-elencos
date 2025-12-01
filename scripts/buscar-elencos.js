@@ -35,10 +35,10 @@ const DB_TIMES = [
   {nome: 'Santos', id: 128},
   {nome: 'Mirassol', id: 7848},
   {nome: 'Novorizontino', id: 7834},
-  {nome: 'Sport', id: 123},
+  {nome: 'Sport Recife', id: 123},
   {nome: 'Ceará', id: 129},
   {nome: 'Goiás', id: 151},
-  {nome: 'Operário-PR', id: 1223},
+  {nome: 'Operário - PR', id: 1223},
   {nome: 'Vila Nova', id: 142},
   {nome: 'América Mineiro', id: 125},
   {nome: 'Coritiba', id: 147},
@@ -66,7 +66,7 @@ const DB_TIMES = [
   {nome: 'Londrina', id: 148},
   {nome: 'São Bernardo', id: 7865},
   {nome: 'Caxias', id: 7770},
-  {nome: 'Athletic', id: 13975},
+  {nome: 'Athletic Club', id: 13975},
   {nome: 'Tombense', id: 2227},
   {nome: 'Botafogo-PB', id: 1197},
   {nome: 'Aparecidense', id: 1202},
@@ -169,7 +169,9 @@ function fetchHTTPS(url, options = {}, redirectCount = 0) {
 }
 
 // Função para buscar elenco de um time da API
-async function buscarElencoAPI(timeId) {
+async function buscarElencoAPI(timeId, tentativa = 1) {
+  const MAX_TENTATIVAS = 3;
+  
   try {
     console.log(`   Tentando endpoint principal...`);
     const url = `https://v3.football.api-sports.io/players/squads?team=${timeId}`;
@@ -216,6 +218,15 @@ async function buscarElencoAPI(timeId) {
     return [];
   } catch (error) {
     console.log(`   ❌ Erro: ${error.message}`);
+    
+    // Retry com backoff exponencial
+    if (tentativa < MAX_TENTATIVAS) {
+      const waitTime = tentativa * 3000; // 3s, 6s
+      console.log(`   🔄 Tentativa ${tentativa + 1}/${MAX_TENTATIVAS} em ${waitTime}ms...`);
+      await delay(waitTime);
+      return buscarElencoAPI(timeId, tentativa + 1);
+    }
+    
     return [];
   }
 }
@@ -285,7 +296,8 @@ async function buscarTodosElencos() {
   console.log(`   ✅ ${timesParaBuscar.length} times encontrados no banco\n`);
 
   // 3. Buscar elencos da API
-  console.log(`⚽ Buscando elencos de ${timesParaBuscar.length} times...\n`);
+  console.log(`⚽ Buscando elencos de ${timesParaBuscar.length} times...`);
+  console.log(`⏱️  Tempo estimado: ~${Math.ceil(timesParaBuscar.length * 2.5 / 60)} minutos\n`);
   const elencos = {};
   let sucessos = 0;
   let falhas = 0;
@@ -303,9 +315,9 @@ async function buscarTodosElencos() {
       falhas++;
     }
 
-    // Delay de 500ms entre chamadas para respeitar rate limit
+    // Delay de 2000ms (2 segundos) entre chamadas para respeitar rate limit
     if (i < timesParaBuscar.length - 1) {
-      await delay(500);
+      await delay(2000);
     }
   }
 

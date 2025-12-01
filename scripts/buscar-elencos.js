@@ -35,10 +35,10 @@ const DB_TIMES = [
   {nome: 'Santos', id: 128},
   {nome: 'Mirassol', id: 7848},
   {nome: 'Novorizontino', id: 7834},
-  {nome: 'Sport Recife', id: 123},
+  {nome: 'Sport', id: 123},
   {nome: 'Ceará', id: 129},
   {nome: 'Goiás', id: 151},
-  {nome: 'Operário - PR', id: 1223},
+  {nome: 'Operário-PR', id: 1223},
   {nome: 'Vila Nova', id: 142},
   {nome: 'América Mineiro', id: 125},
   {nome: 'Coritiba', id: 147},
@@ -66,7 +66,7 @@ const DB_TIMES = [
   {nome: 'Londrina', id: 148},
   {nome: 'São Bernardo', id: 7865},
   {nome: 'Caxias', id: 7770},
-  {nome: 'Athletic Club', id: 13975},
+  {nome: 'Athletic', id: 13975},
   {nome: 'Tombense', id: 2227},
   {nome: 'Botafogo-PB', id: 1197},
   {nome: 'Aparecidense', id: 1202},
@@ -297,7 +297,9 @@ async function buscarTodosElencos() {
 
   // 3. Buscar elencos da API
   console.log(`⚽ Buscando elencos de ${timesParaBuscar.length} times...`);
-  console.log(`⏱️  Tempo estimado: ~${Math.ceil(timesParaBuscar.length * 2.5 / 60)} minutos\n`);
+  const pausas = Math.floor(timesParaBuscar.length / 10);
+  const tempoEstimado = Math.ceil((timesParaBuscar.length * 3 + pausas * 10) / 60);
+  console.log(`⏱️  Tempo estimado: ~${tempoEstimado} minutos (3s por time + pausas de 10s a cada 10 times)\n`);
   const elencos = {};
   let sucessos = 0;
   let falhas = 0;
@@ -315,9 +317,15 @@ async function buscarTodosElencos() {
       falhas++;
     }
 
-    // Delay de 2000ms (2 segundos) entre chamadas para respeitar rate limit
+    // Delay entre chamadas para respeitar rate limit
     if (i < timesParaBuscar.length - 1) {
-      await delay(2000);
+      // Pausa extra a cada 10 requests para evitar bloqueio
+      if ((i + 1) % 10 === 0) {
+        console.log(`\n   ⏸️  Pausa de 10 segundos após ${i + 1} requisições para evitar rate limit...\n`);
+        await delay(10000);
+      } else {
+        await delay(3000); // 3 segundos entre cada chamada
+      }
     }
   }
 

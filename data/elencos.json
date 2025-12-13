@@ -2108,7 +2108,7 @@
       {
         "id": 10364,
         "nome": "Michael",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 30
       },
       {
@@ -3260,7 +3260,7 @@
       {
         "id": 9907,
         "nome": "Victor Luís",
-        "posicao": "Midfielder",
+        "posicao": "Defender",
         "numero": 12
       },
       {
@@ -3296,7 +3296,7 @@
       {
         "id": 10170,
         "nome": "Hugo Moura",
-        "posicao": "Defender",
+        "posicao": "Midfielder",
         "numero": 25
       },
       {
@@ -3356,7 +3356,7 @@
       {
         "id": 345748,
         "nome": "A. Gómez",
-        "posicao": "Attacker",
+        "posicao": "Midfielder",
         "numero": 11
       },
       {
@@ -8913,6 +8913,6 @@
       }
     ]
   },
-  "ultima_atualizacao": "2025-12-12T04:03:02.146Z",
+  "ultima_atualizacao": "2025-12-13T03:55:39.663Z",
   "total_times": 40
 }

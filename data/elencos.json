@@ -1988,7 +1988,7 @@
       {
         "id": 2414,
         "nome": "Everton",
-        "posicao": "Attacker",
+        "posicao": "Midfielder",
         "numero": 11
       },
       {
@@ -8913,6 +8913,6 @@
       }
     ]
   },
-  "ultima_atualizacao": "2025-12-14T04:06:34.238Z",
+  "ultima_atualizacao": "2025-12-15T04:10:57.493Z",
   "total_times": 40
 }

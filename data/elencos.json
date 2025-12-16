@@ -3702,7 +3702,7 @@
       {
         "id": 414405,
         "nome": "K. Arroyo",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 99
       },
       {
@@ -3750,7 +3750,7 @@
       {
         "id": 25618,
         "nome": "Matheus Pereira",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 10
       },
       {
@@ -4136,7 +4136,7 @@
         "numero": 3
       },
       {
-        "id": 554570,
+        "id": 405893,
         "nome": "Joao Gabriel",
         "posicao": "Defender",
         "numero": 20
@@ -4746,7 +4746,7 @@
         "numero": 20
       },
       {
-        "id": 576368,
+        "id": 216335,
         "nome": "Emerson Urso",
         "posicao": "Attacker",
         "numero": 17
@@ -5346,7 +5346,7 @@
         "numero": 4
       },
       {
-        "id": 544995,
+        "id": 454925,
         "nome": "Wallace",
         "posicao": "Defender",
         "numero": 82
@@ -8913,6 +8913,6 @@
       }
     ]
   },
-  "ultima_atualizacao": "2025-12-15T04:10:57.493Z",
+  "ultima_atualizacao": "2025-12-16T04:04:00.485Z",
   "total_times": 40
 }

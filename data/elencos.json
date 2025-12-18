@@ -358,7 +358,7 @@
         "numero": 43
       },
       {
-        "id": 544682,
+        "id": 143368,
         "nome": "Bruno Gomes",
         "posicao": "Midfielder",
         "numero": 15
@@ -910,13 +910,13 @@
       {
         "id": 51620,
         "nome": "F. Torres",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 17
       },
       {
         "id": 340279,
         "nome": "Vitor Roque",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 9
       }
     ],
@@ -1704,7 +1704,7 @@
       {
         "id": 190,
         "nome": "Cédric Soares",
-        "posicao": "Midfielder",
+        "posicao": "Defender",
         "numero": 6
       },
       {
@@ -1800,7 +1800,7 @@
       {
         "id": 106510,
         "nome": "Ferreira",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 11
       },
       {
@@ -1830,7 +1830,7 @@
       {
         "id": 1218,
         "nome": "E. Rigoni",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 77
       },
       {
@@ -5758,7 +5758,7 @@
         "numero": 4
       },
       {
-        "id": 562650,
+        "id": 446851,
         "nome": "Yago Lincoln",
         "posicao": "Defender",
         "numero": 15
@@ -5818,7 +5818,7 @@
         "numero": 22
       },
       {
-        "id": 562635,
+        "id": 11011,
         "nome": "Henrique",
         "posicao": "Attacker",
         "numero": 17
@@ -5830,7 +5830,7 @@
         "numero": 50
       },
       {
-        "id": 562652,
+        "id": 195385,
         "nome": "Iago Teles",
         "posicao": "Attacker",
         "numero": 11
@@ -8907,6 +8907,6 @@
       }
     ]
   },
-  "ultima_atualizacao": "2025-12-17T04:00:48.273Z",
+  "ultima_atualizacao": "2025-12-18T04:01:58.582Z",
   "total_times": 40
 }

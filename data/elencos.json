@@ -1988,7 +1988,7 @@
       {
         "id": 2414,
         "nome": "Everton",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 11
       },
       {
@@ -2120,7 +2120,7 @@
       {
         "id": 16369,
         "nome": "G. Plata",
-        "posicao": "Attacker",
+        "posicao": "Midfielder",
         "numero": 50
       }
     ],
@@ -6448,7 +6448,7 @@
         "numero": 7
       },
       {
-        "id": 544677,
+        "id": 266568,
         "nome": "Rodrigo",
         "posicao": "Midfielder",
         "numero": 29
@@ -8907,6 +8907,6 @@
       }
     ]
   },
-  "ultima_atualizacao": "2025-12-18T04:01:58.582Z",
+  "ultima_atualizacao": "2025-12-19T04:03:34.775Z",
   "total_times": 40
 }

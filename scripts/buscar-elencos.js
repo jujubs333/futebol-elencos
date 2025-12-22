@@ -347,7 +347,15 @@ async function buscarTodosElencos() {
   console.log(`   ❌ Falhas: ${falhas}`);
   console.log(`   📦 Total de times com elenco: ${Object.keys(elencos).length}`);
 
-  // 4. Salvar JSON
+  // 4. Verificar se TODOS os times tiveram sucesso
+  if (falhas > 0) {
+    console.log(`\n❌ ATENÇÃO: ${falhas} time(s) falharam!`);
+    console.log(`   O arquivo elencos.json NÃO será atualizado.`);
+    console.log(`   Todos os ${timesParaBuscar.length} times precisam ter sucesso.\n`);
+    process.exit(1);
+  }
+
+  // 5. Salvar JSON (só se todos tiverem sucesso)
   console.log(`\n💾 Salvando arquivo elencos.json...`);
   
   fs.mkdirSync('data', { recursive: true });
@@ -365,7 +373,7 @@ async function buscarTodosElencos() {
   );
 
   console.log('   ✅ Arquivo salvo em data/elencos.json');
-  console.log('\n🎉 Processo concluído com sucesso!\n');
+  console.log(`\n🎉 Processo concluído com sucesso! Todos os ${sucessos} times atualizados.\n`);
 }
 
 // Executar

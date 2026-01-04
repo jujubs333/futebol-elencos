@@ -498,12 +498,6 @@
         "numero": 20
       },
       {
-        "id": 1845,
-        "nome": "Bartolomeu Jacinto Quissanga",
-        "posicao": "Defender",
-        "numero": 15
-      },
-      {
         "id": 353034,
         "nome": "Cuiabano",
         "posicao": "Defender",
@@ -1940,7 +1934,7 @@
       {
         "id": 2560,
         "nome": "E. Pulgar",
-        "posicao": "Midfielder",
+        "posicao": "Defender",
         "numero": 5
       },
       {
@@ -1982,7 +1976,7 @@
       {
         "id": 2414,
         "nome": "Everton",
-        "posicao": "Attacker",
+        "posicao": "Midfielder",
         "numero": 11
       },
       {
@@ -2048,7 +2042,7 @@
       {
         "id": 405160,
         "nome": "Wallace",
-        "posicao": "Attacker",
+        "posicao": "Midfielder",
         "numero": 64
       },
       {
@@ -2114,7 +2108,7 @@
       {
         "id": 16369,
         "nome": "G. Plata",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 50
       }
     ],
@@ -2896,7 +2890,7 @@
       {
         "id": 2426,
         "nome": "A. Carrillo",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 19
       },
       {
@@ -2908,7 +2902,7 @@
       {
         "id": 463975,
         "nome": "Dieguinho",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 61
       },
       {
@@ -3296,7 +3290,7 @@
       {
         "id": 311157,
         "nome": "Matheus França",
-        "posicao": "Attacker",
+        "posicao": "Midfielder",
         "numero": 9
       },
       {
@@ -3332,13 +3326,13 @@
       {
         "id": 144743,
         "nome": "B. Garré",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 15
       },
       {
         "id": 345748,
         "nome": "A. Gómez",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 11
       },
       {
@@ -3356,7 +3350,7 @@
       {
         "id": 163260,
         "nome": "Nuno Moreira",
-        "posicao": "Midfielder",
+        "posicao": "Attacker",
         "numero": 17
       },
       {
@@ -8847,6 +8841,6 @@
       }
     ]
   },
-  "ultima_atualizacao": "2025-12-28T04:12:20.000Z",
+  "ultima_atualizacao": "2026-01-04T04:14:59.026Z",
   "total_times": 40
 }

@@ -116,6 +116,21 @@ const DB_TIMES = [
   {nome: 'Uberlândia', id: 1196},
   {nome: 'Monte Azul', id: 10021},
   {nome: 'Itabirito', id: 21165},
+  // COPA DO MUNDO
+  {nome: 'Bélgica', id: 1},
+  {nome: 'França', id: 2},
+  {nome: 'Croácia', id: 3},
+  {nome: 'Brasil', id: 6},
+  {nome: 'Uruguai', id: 7},
+  {nome: 'Colombia', id: 8},
+  {nome: 'Espanha', id: 9},
+  {nome: 'Inglaterra', id: 10},
+  {nome: 'Japão', id: 12},
+  {nome: 'México', id: 16},
+  {nome: 'Alemanha', id: 25},
+  {nome: 'Argentina', id: 26},
+  {nome: 'Portugal', id: 27},
+  {nome: 'Holanda', id: 1118},
 ];
 
 // Função para remover acentos

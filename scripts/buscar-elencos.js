@@ -266,19 +266,21 @@ async function buscarTodosElencos() {
 
   const linhas = csvText.split('\n').map((l) => l.trim()).filter((l) => l);
   
-  // Separar em Série A e Série B
+  // Separar em Série A, Série B e Copa do Mundo
   const serieA = [];
   const serieB = [];
+  const copaDoMundo = [];
   
   // Pular primeira linha (cabeçalhos)
   for (let i = 1; i < linhas.length; i++) {
     const colunas = linhas[i].split(',').map((c) => c.trim());
     if (colunas[0]) serieA.push(colunas[0]);
     if (colunas[1]) serieB.push(colunas[1]);
+    if (colunas[2]) copaDoMundo.push(colunas[2]);
   }
   
-  // Juntar todos os times (Série A + Série B)
-  const todosNomesTimes = [...serieA, ...serieB];
+  // Juntar todos os times (Série A + Série B + Copa do Mundo)
+  const todosNomesTimes = [...serieA, ...serieB, ...copaDoMundo];
 
   console.log(`   ✅ ${todosNomesTimes.length} times encontrados na planilha`);
   console.log(`   Times da planilha:`, todosNomesTimes);

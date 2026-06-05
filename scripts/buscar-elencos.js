@@ -116,21 +116,58 @@ const DB_TIMES = [
   {nome: 'Uberlândia', id: 1196},
   {nome: 'Monte Azul', id: 10021},
   {nome: 'Itabirito', id: 21165},
-  // COPA DO MUNDO
-  {nome: 'Bélgica', id: 1},
-  {nome: 'França', id: 2},
-  {nome: 'Croácia', id: 3},
-  {nome: 'Brasil', id: 6},
-  {nome: 'Uruguai', id: 7},
-  {nome: 'Colombia', id: 8},
-  {nome: 'Espanha', id: 9},
-  {nome: 'Inglaterra', id: 10},
-  {nome: 'Japão', id: 12},
-  {nome: 'México', id: 16},
-  {nome: 'Alemanha', id: 25},
-  {nome: 'Argentina', id: 26},
-  {nome: 'Portugal', id: 27},
-  {nome: 'Holanda', id: 1118},
+];
+
+// Mapeamento de seleções da Copa do Mundo 2026 (FIFA code → ID do app)
+const COPA_TIMES_MAP = [
+  {fifa_code: 'ALG', id: 3001},
+  {fifa_code: 'ARG', id: 26},
+  {fifa_code: 'AUS', id: 3002},
+  {fifa_code: 'AUT', id: 3003},
+  {fifa_code: 'BEL', id: 1},
+  {fifa_code: 'BIH', id: 3004},
+  {fifa_code: 'BRA', id: 6},
+  {fifa_code: 'CPV', id: 3005},
+  {fifa_code: 'CAN', id: 3006},
+  {fifa_code: 'COL', id: 8},
+  {fifa_code: 'COD', id: 3007},
+  {fifa_code: 'CIV', id: 3008},
+  {fifa_code: 'CRO', id: 3},
+  {fifa_code: 'CUW', id: 3009},
+  {fifa_code: 'CZE', id: 3010},
+  {fifa_code: 'ECU', id: 3011},
+  {fifa_code: 'EGY', id: 3012},
+  {fifa_code: 'ENG', id: 10},
+  {fifa_code: 'FRA', id: 2},
+  {fifa_code: 'GER', id: 25},
+  {fifa_code: 'GHA', id: 3013},
+  {fifa_code: 'HAI', id: 3014},
+  {fifa_code: 'IRN', id: 3015},
+  {fifa_code: 'IRQ', id: 3016},
+  {fifa_code: 'JPN', id: 12},
+  {fifa_code: 'JOR', id: 3017},
+  {fifa_code: 'KOR', id: 3018},
+  {fifa_code: 'MEX', id: 16},
+  {fifa_code: 'MAR', id: 3019},
+  {fifa_code: 'NED', id: 1118},
+  {fifa_code: 'NZL', id: 3020},
+  {fifa_code: 'NOR', id: 3021},
+  {fifa_code: 'PAN', id: 3022},
+  {fifa_code: 'PAR', id: 3023},
+  {fifa_code: 'POR', id: 27},
+  {fifa_code: 'QAT', id: 3024},
+  {fifa_code: 'KSA', id: 3025},
+  {fifa_code: 'SCO', id: 3026},
+  {fifa_code: 'SEN', id: 3027},
+  {fifa_code: 'RSA', id: 3028},
+  {fifa_code: 'ESP', id: 9},
+  {fifa_code: 'SWE', id: 3029},
+  {fifa_code: 'SUI', id: 3030},
+  {fifa_code: 'TUN', id: 3031},
+  {fifa_code: 'TUR', id: 3032},
+  {fifa_code: 'URU', id: 7},
+  {fifa_code: 'USA', id: 3033},
+  {fifa_code: 'UZB', id: 3034},
 ];
 
 // Função para remover acentos
@@ -248,6 +285,45 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// Função para carregar elencos das seleções a partir do JSON local
+function carregarElencosCopa() {
+  console.log('🌍 Carregando elencos das seleções de elencos_copa_2026.json...');
+  
+  let copaData;
+  try {
+    const raw = fs.readFileSync('./elencos_copa_2026.json', 'utf8');
+    copaData = JSON.parse(raw);
+  } catch (error) {
+    console.error('❌ Erro ao ler elencos_copa_2026.json:', error.message);
+    process.exit(1);
+  }
+
+  const elencosCopa = {};
+  let totalJogadores = 0;
+
+  for (const selecao of copaData.teams) {
+    const mapeamento = COPA_TIMES_MAP.find(m => m.fifa_code === selecao.fifa_code);
+    if (!mapeamento) {
+      console.log(`   ⚠️  FIFA code não mapeado: ${selecao.fifa_code} (${selecao.team})`);
+      continue;
+    }
+
+    const jogadores = selecao.players.map((j, idx) => ({
+      id: mapeamento.id * 10000 + idx,
+      nome: j.name,
+      posicao: j.position,
+      numero: j.number,
+    }));
+
+    elencosCopa[mapeamento.id.toString()] = jogadores;
+    totalJogadores += jogadores.length;
+    console.log(`   ✅ ${selecao.team} (ID: ${mapeamento.id}) → ${jogadores.length} jogadores`);
+  }
+
+  console.log(`   ✅ ${Object.keys(elencosCopa).length} seleções carregadas (${totalJogadores} jogadores no total)\n`);
+  return elencosCopa;
+}
+
 // Função principal
 async function buscarTodosElencos() {
   console.log('🚀 Iniciando busca de elencos...\n');
@@ -266,23 +342,21 @@ async function buscarTodosElencos() {
 
   const linhas = csvText.split('\n').map((l) => l.trim()).filter((l) => l);
   
-  // Separar em Série A, Série B e Copa do Mundo
+  // Separar apenas Série A e Série B (Copa do Mundo vem do JSON local)
   const serieA = [];
   const serieB = [];
-  const copaDoMundo = [];
   
   // Pular primeira linha (cabeçalhos)
   for (let i = 1; i < linhas.length; i++) {
     const colunas = linhas[i].split(',').map((c) => c.trim());
     if (colunas[0]) serieA.push(colunas[0]);
     if (colunas[1]) serieB.push(colunas[1]);
-    if (colunas[2]) copaDoMundo.push(colunas[2]);
   }
   
-  // Juntar todos os times (Série A + Série B + Copa do Mundo)
-  const todosNomesTimes = [...serieA, ...serieB, ...copaDoMundo];
+  // Apenas Série A e Série B são buscados na API
+  const todosNomesTimes = [...serieA, ...serieB];
 
-  console.log(`   ✅ ${todosNomesTimes.length} times encontrados na planilha`);
+  console.log(`   ✅ ${todosNomesTimes.length} times de clubes encontrados na planilha (Série A + B)`);
   console.log(`   Times da planilha:`, todosNomesTimes);
   console.log();
 
@@ -309,8 +383,8 @@ async function buscarTodosElencos() {
 
   console.log(`   ✅ ${timesParaBuscar.length} times encontrados no banco\n`);
 
-  // 3. Buscar elencos da API
-  console.log(`⚽ Buscando elencos de ${timesParaBuscar.length} times...`);
+  // 3. Buscar elencos dos clubes na API
+  console.log(`⚽ Buscando elencos de ${timesParaBuscar.length} times na API...`);
   console.log(`⚠️  Plano FREE: 10 requests/minuto`);
   
   const batchSize = 10;
@@ -359,12 +433,12 @@ async function buscarTodosElencos() {
     }
   }
 
-  console.log(`\n📊 Resumo:`);
+  console.log(`\n📊 Resumo da API:`);
   console.log(`   ✅ Sucessos: ${sucessos}`);
   console.log(`   ❌ Falhas: ${falhas}`);
-  console.log(`   📦 Total de times com elenco: ${Object.keys(elencos).length}`);
+  console.log(`   📦 Total de clubes com elenco: ${Object.keys(elencos).length}`);
 
-  // 4. Verificar se TODOS os times tiveram sucesso
+  // 4. Verificar se TODOS os clubes tiveram sucesso
   if (falhas > 0) {
     console.log(`\n❌ ATENÇÃO: ${falhas} time(s) falharam!`);
     console.log(`   O arquivo elencos.json NÃO será atualizado.`);
@@ -372,7 +446,11 @@ async function buscarTodosElencos() {
     process.exit(1);
   }
 
-  // 5. Salvar JSON (só se todos tiverem sucesso)
+  // 5. Carregar elencos das seleções do JSON local e mesclar
+  const elencosCopa = carregarElencosCopa();
+  Object.assign(elencos, elencosCopa);
+
+  // 6. Salvar JSON (só se todos os clubes tiverem sucesso)
   console.log(`\n💾 Salvando arquivo elencos.json...`);
   
   fs.mkdirSync('data', { recursive: true });
@@ -390,7 +468,7 @@ async function buscarTodosElencos() {
   );
 
   console.log('   ✅ Arquivo salvo em data/elencos.json');
-  console.log(`\n🎉 Processo concluído com sucesso! Todos os ${sucessos} times atualizados.\n`);
+  console.log(`\n🎉 Processo concluído com sucesso! ${sucessos} clubes (API) + ${Object.keys(elencosCopa).length} seleções (JSON) = ${Object.keys(elencos).length} times no total.\n`);
 }
 
 // Executar

@@ -8,7 +8,7 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-// Banco de dados de times (COMPLETO - copiado do App.tsx)
+// Banco de dados de times
 const DB_TIMES = [
   // SÉRIE A
   {nome: 'Palmeiras', id: 121},
@@ -116,21 +116,55 @@ const DB_TIMES = [
   {nome: 'Uberlândia', id: 1196},
   {nome: 'Monte Azul', id: 10021},
   {nome: 'Itabirito', id: 21165},
-  // COPA DO MUNDO
-  {nome: 'Bélgica', id: 1},
-  {nome: 'França', id: 2},
-  {nome: 'Croácia', id: 3},
-  {nome: 'Brasil', id: 6},
-  {nome: 'Uruguai', id: 7},
-  {nome: 'Colombia', id: 8},
-  {nome: 'Espanha', id: 9},
-  {nome: 'Inglaterra', id: 10},
-  {nome: 'Japão', id: 12},
-  {nome: 'México', id: 16},
-  {nome: 'Alemanha', id: 25},
-  {nome: 'Argentina', id: 26},
-  {nome: 'Portugal', id: 27},
-  {nome: 'Holanda', id: 1118},
+  // COPA DO MUNDO (Não serão buscados pela API)
+  { nome: 'África do Sul', id: 2001 },
+  { nome: 'Alemanha', id: 25 },
+  { nome: 'Arábia Saudita', id: 2003 },
+  { nome: 'Argélia', id: 2004 },
+  { nome: 'Argentina', id: 26 },
+  { nome: 'Austrália', id: 2006 },
+  { nome: 'Áustria', id: 2007 },
+  { nome: 'Bélgica', id: 1 },
+  { nome: 'Bósnia e Herzegovina', id: 2009 },
+  { nome: 'Brasil', id: 6 },
+  { nome: 'Cabo Verde', id: 2011 },
+  { nome: 'Canadá', id: 2012 },
+  { nome: 'Catar', id: 2013 },
+  { nome: 'Chéquia', id: 2014 },
+  { nome: 'Colômbia', id: 8 },
+  { nome: 'Coreia do Sul', id: 2016 },
+  { nome: 'Costa do Marfim', id: 2017 },
+  { nome: 'Croácia', id: 3 },
+  { nome: 'Curaçao', id: 2019 },
+  { nome: 'Egito', id: 2020 },
+  { nome: 'Equador', id: 2021 },
+  { nome: 'Escócia', id: 2022 },
+  { nome: 'Espanha', id: 9 },
+  { nome: 'EUA', id: 2024 },
+  { nome: 'França', id: 2 },
+  { nome: 'Gana', id: 2026 },
+  { nome: 'Haiti', id: 2027 },
+  { nome: 'Holanda', id: 1118 },
+  { nome: 'Inglaterra', id: 10 },
+  { nome: 'Irã', id: 2030 },
+  { nome: 'Iraque', id: 2031 },
+  { nome: 'Japão', id: 12 },
+  { nome: 'Jordânia', id: 2033 },
+  { nome: 'Marrocos', id: 2034 },
+  { nome: 'México', id: 16 },
+  { nome: 'Noruega', id: 2036 },
+  { nome: 'Nova Zelândia', id: 2037 },
+  { nome: 'Panamá', id: 2038 },
+  { nome: 'Paraguai', id: 2039 },
+  { nome: 'Portugal', id: 27 },
+  { nome: 'RD Congo', id: 2041 },
+  { nome: 'Senegal', id: 2042 },
+  { nome: 'Suécia', id: 2043 },
+  { nome: 'Suíça', id: 2044 },
+  { nome: 'Tunísia', id: 2045 },
+  { nome: 'Turquia', id: 2046 },
+  { nome: 'Uruguai', id: 7 },
+  { nome: 'Uzbequistão', id: 2048 }
 ];
 
 // Função para remover acentos
@@ -266,23 +300,22 @@ async function buscarTodosElencos() {
 
   const linhas = csvText.split('\n').map((l) => l.trim()).filter((l) => l);
   
-  // Separar em Série A, Série B e Copa do Mundo
+  // Separar em Série A e Série B apenas
   const serieA = [];
   const serieB = [];
-  const copaDoMundo = [];
   
   // Pular primeira linha (cabeçalhos)
   for (let i = 1; i < linhas.length; i++) {
     const colunas = linhas[i].split(',').map((c) => c.trim());
     if (colunas[0]) serieA.push(colunas[0]);
     if (colunas[1]) serieB.push(colunas[1]);
-    if (colunas[2]) copaDoMundo.push(colunas[2]);
+    // Coluna 2 (Copa do Mundo) é ignorada aqui de propósito
   }
   
-  // Juntar todos os times (Série A + Série B + Copa do Mundo)
-  const todosNomesTimes = [...serieA, ...serieB, ...copaDoMundo];
+  // Juntar apenas Série A e Série B para a API
+  const todosNomesTimes = [...serieA, ...serieB];
 
-  console.log(`   ✅ ${todosNomesTimes.length} times encontrados na planilha`);
+  console.log(`   ✅ ${todosNomesTimes.length} times encontrados na planilha (Apenas Séries A e B)`);
   console.log(`   Times da planilha:`, todosNomesTimes);
   console.log();
 
@@ -296,7 +329,7 @@ async function buscarTodosElencos() {
     for (const timeDb of DB_TIMES) {
       const dbClean = removeAccents(timeDb.nome.toLowerCase().trim());
       
-      // Match exato (mesma lógica do App.tsx)
+      // Match exato
       if (dbClean === nClean) {
         if (!timesParaBuscar.find(t => t.id === timeDb.id)) {
           timesParaBuscar.push(timeDb);

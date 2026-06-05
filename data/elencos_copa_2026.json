@@ -1,0 +1,6635 @@
+{
+  "competition": "FIFA World Cup 2026",
+  "last_checked": "2026-06-06",
+  "source": "FIFA official Squad Lists PDF (English), version 1, 4 June 2026 20:57 UTC",
+  "numbering_note": "A numeração foi extraída do PDF oficial da FIFA; cada página lista os 26 jogadores na ordem dos números 1 a 26.",
+  "team_count": 48,
+  "player_count": 1248,
+  "schema_note": "Campos por jogador: name, number, position. Números preenchidos a partir do PDF oficial da FIFA.",
+  "teams": [
+    {
+      "team": "Algeria",
+      "fifa_team_name": "Algeria",
+      "fifa_code": "ALG",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Melvin Mastil",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Aissa Mandi",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Achraf Abada",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohamed Amine Tougai",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Zineddine Belaid",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Ramiz Zerrouki",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Riyad Mahrez",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Houssem Aouar",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Amine Gouiri",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Fares Chaibi",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Anis Hadj Moussa",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Nadhir Benbouali",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Jaouen Hadjam",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Hicham Boudaoui",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Rayan Ait-Nouri",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Oussama Benbot",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ra«k Belghali",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohamed Amoura",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Nabil Bentaleb",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Adil Boulbina",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Ramy Bensebaini",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Ibrahim Maza",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Luca Zidane",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Yassine Titraoui",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Fares Ghedjemis",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Samir Chergui",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Argentina",
+      "fifa_team_name": "Argentina",
+      "fifa_code": "ARG",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Juan Musso",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Leonardo Balerdi",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Nicolas Tagliafico",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Gonzalo Montiel",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Leandro Paredes",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Lisandro Martinez",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Rodrigo De Paul",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Valentin Barco",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Julian Alvarez",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Lionel Messi",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Giovani Lo Celso",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Geronimo Rulli",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Cristian Romero",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Exequiel Palacios",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Nico Gonzalez",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Thiago Almada",
+          "number": 16,
+          "position": "atacante"
+        },
+        {
+          "name": "Giuliano Simeone",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Nico Paz",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Nicolas Otamendi",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Alexis Mac Allister",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Jose Manuel Lopez",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Lautaro Martinez",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "Emiliano Martinez",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Enzo Fernandez",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Facundo Medina",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Nahuel Molina",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Australia",
+      "fifa_team_name": "Australia",
+      "fifa_code": "AUS",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Mathew Ryan",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Milos Degenek",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Alessandro Circati",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Jacob Italiano",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Jordan Bos",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Jason Geria",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Mathew Leckie",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Connor Metcalfe",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Mohamed Toure",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Ajdin Hrustic",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Awer Mabil",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Paul Izzo",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Aiden Oneill",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Cameron Devlin",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Kai Trewin",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Aziz Behich",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Nestory Irankunda",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Patrick Beach",
+          "number": 18,
+          "position": "goleiro"
+        },
+        {
+          "name": "Harry Souttar",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Cristian Volpato",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Cameron Burgess",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Jackson Irvine",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Nishan Velupillay",
+          "number": 23,
+          "position": "atacante"
+        },
+        {
+          "name": "Paul Okon-Engstler",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Lucas Herrington",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Tete Yengi",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Austria",
+      "fifa_team_name": "Austria",
+      "fifa_code": "AUT",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Alexander Schlager",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "David Affengruber",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Kevin Danso",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Xaver Schlager",
+          "number": 4,
+          "position": "meia"
+        },
+        {
+          "name": "Stefan Posch",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Nicolas Seiwald",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Marko Arnautovic",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "David Alaba",
+          "number": 8,
+          "position": "defensor"
+        },
+        {
+          "name": "Marcel Sabitzer",
+          "number": 9,
+          "position": "meia"
+        },
+        {
+          "name": "Florian Grillitsch",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Michael Gregoritsch",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Florian Wiegele",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Patrick Pentz",
+          "number": 13,
+          "position": "goleiro"
+        },
+        {
+          "name": "Sasa Kalajdzic",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Philipp Lienhart",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Phillip Mwene",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Carney Chukwuemeka",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Romano Schmid",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Christoph Baumgartner",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Konrad Laimer",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Patrick Wimmer",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Alexander Prass",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Marco Friedl",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Paul Wanner",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Michael Svoboda",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Alessandro Schoepf",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Belgium",
+      "fifa_team_name": "Belgium",
+      "fifa_code": "BEL",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Thibaut Courtois",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Zeno Debast",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Arthur Theate",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Brandon Mechele",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Maxim De Cuyper",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Axel Witsel",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Kevin De Bruyne",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Youri Tielemans",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Romelu Lukaku",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Leandro Trossard",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Jeremy Doku",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Senne Lammens",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Mike Penders",
+          "number": 13,
+          "position": "goleiro"
+        },
+        {
+          "name": "Dodi Lukebakio",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Thomas Meunier",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Koni De Winter",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Charles De Ketelaere",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Joaquin Seys",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Diego Moreira",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Hans Vanaken",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Timothy Castagne",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Alexis Saelemaekers",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Nicolas Raskin",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Amadou Onana",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Nathan Ngoy",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Matias Fernandez-Pardo",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Bosnia and Herzegovina",
+      "fifa_team_name": "Bosnia And Herzegovina",
+      "fifa_code": "BIH",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Nikola Vasilj",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Nihad Mujakic",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Dennis Hadzikadunic",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Tarik Muharemovic",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Sead Kolasinac",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Benjamin Tahirovic",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Amar Dedic",
+          "number": 7,
+          "position": "defensor"
+        },
+        {
+          "name": "Armin Gigovic",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Samed Bazdar",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Ermedin Demirovic",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Edin Dzeko",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Mladen Jurkas",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ivan Basic",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Ivan Sunjic",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Amar Memic",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Amir Hadziahmetovic",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Dzenis Burnic",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Nikola Katic",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Kerim Alajbegovic",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Esmir Bajraktarevic",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Stjepan Radeljic",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Martin Zlomislic",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Haris Tabakovic",
+          "number": 23,
+          "position": "atacante"
+        },
+        {
+          "name": "Nidal Celik",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Jovo Lukic",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Ermin Mahmic",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Brazil",
+      "fifa_team_name": "Brazil",
+      "fifa_code": "BRA",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Álisson Becker",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Wesley",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Gabriel Magalhaes",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Marquinhos",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Casemiro",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Alex Sandro",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Vinicius Junior",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Bruno Guimaraes",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Matheus Cunha",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Neymar Jr",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Raphinha",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Weverton",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Danilo",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Bremer",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Leo Pereira",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Douglas Santos",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Fabinho",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Danilo Santos",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Endrick",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Lucas Paqueta",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Luiz Henrique",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Gabriel Martinelli",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "Ederson",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Roger Ibanez",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Igor Thiago",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Rayan",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Cape Verde",
+      "fifa_team_name": "Cabo Verde",
+      "fifa_code": "CPV",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Vozinha",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Stopira",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Diney Borges",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Pico Lopes",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Logan Costa",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Kevin Pina",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Jovane Cabral",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Joao Paulo",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Gilson Benchimol",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Jamiro Monteiro",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Garry Rodrigues",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Marcio Rosa",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Sidny Lopes Cabral",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Deroy Duarte",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Laros Duarte",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Yannick Semedo",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Willy Semedo",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Telmo Arcanjo",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Dailon Livramento",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Ryan Mendes",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Nuno Da Costa",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Steven Moreira",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Cj Dos Santos",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Wagner Pina",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Kelvin Pires",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Helio Varela",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Canada",
+      "fifa_team_name": "Canada",
+      "fifa_code": "CAN",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Dayne St. Clair",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Alistair Johnston",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Al«e Jones",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Luc De Fougerolles",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Joel Waterman",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Mathieu Choiniere",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Stephen Eustaquio",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Ismael Kone",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Cyle Larin",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Jonathan David",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Liam Millar",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Tani Oluwaseyi",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Derek Cornelius",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Jacob Shaffelburg",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Moise Bombito",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Maxime Crepeau",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Tajon Buchanan",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Owen Goodman",
+          "number": 18,
+          "position": "goleiro"
+        },
+        {
+          "name": "Alphonso Davies",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Ali Ahmed",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Jonathan Osorio",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Richie Laryea",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Niko Sigur",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Promise David",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Nathan Saliba",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Marcelo Flores",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Colombia",
+      "fifa_team_name": "Colombia",
+      "fifa_code": "COL",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "David Ospina",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Daniel Munoz",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Jhon Lucumi",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Santiago Arias",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Kevin Castano",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Richard Rios",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Luis Diaz",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Jorge Carrascal",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Jhon Cordoba",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "James Rodriguez",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Jhon Arias",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Camilo Vargas",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Yerry Mina",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Gustavo Puerta",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Juan Portilla",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Jefferson Lerma",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Johan Mojica",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Willer Ditta",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Cucho Hernandez",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Juan Quintero",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Jaminton Campaz",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Deiver Machado",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Davinson Sanchez",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Alvaro Montero",
+          "number": 24,
+          "position": "goleiro"
+        },
+        {
+          "name": "Luis Suarez",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Andres Gomez",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "DR Congo",
+      "fifa_team_name": "Congo DR",
+      "fifa_code": "COD",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Lionel Mpasi",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Aaron Wan-Bissaka",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Steve Kapuadi",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Axel Tuanzebe",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Dylan Batubinsika",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Ngalayel Mukau",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Nathanael Mbuku",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Samuel Moutoussamy",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Brian Cipenga",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Theo Bongonda",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Gael Kakuta",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Joris Kayembe",
+          "number": 12,
+          "position": "defensor"
+        },
+        {
+          "name": "Meschack Elia",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "Noah Sadiki",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Aaron Tshibola",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Timothy Fayulu",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Cedric Bakambu",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Charles Pickel",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Fiston Mayele",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Yoane Wissa",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Matthieu Epolo",
+          "number": 21,
+          "position": "goleiro"
+        },
+        {
+          "name": "Chancel Mbemba",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Simon Banza",
+          "number": 23,
+          "position": "atacante"
+        },
+        {
+          "name": "Gedeon Kalulu",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Edo Kayembe",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Arthur Masuaku",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Ivory Coast",
+      "fifa_team_name": "Côte D'Ivoire",
+      "fifa_code": "CIV",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Yahia Fofana",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ousmane Diomande",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Ghislain Konan",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Jean Michael Seri",
+          "number": 4,
+          "position": "meia"
+        },
+        {
+          "name": "Wilfried Singo",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Seko Fofana",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Odilon Kossounou",
+          "number": 7,
+          "position": "defensor"
+        },
+        {
+          "name": "Franck Kessie",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Ange-Yoan Bonny",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Simon Adingra",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Yan Diomande",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Elye Wahi",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Christopher Operi",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Oumar Diakite",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Amad Diallo",
+          "number": 15,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohamed Kone",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Guela Doue",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Ibrahim Sangare",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Nicolas Pepe",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Emmanuel Agbadou",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Evan Ndicka",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Evann Guessand",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "Alban Lafont",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Bazoumana Toure",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Parfait Guiagon",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Christ Inao Oulai",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Croatia",
+      "fifa_team_name": "Croatia",
+      "fifa_code": "CRO",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Dominik Livakovic",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Josip Stanisic",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Marin Pongracic",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Josko Gvardiol",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Duje Caleta-Car",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Josip Sutalo",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Nikola Moro",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Mateo Kovacic",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Andrej Kramaric",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Luka Modric",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Ante Budimir",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Ivor Pandur",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Nikola Vlasic",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Ivan Perisic",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Mario Pasalic",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Martin Baturina",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Petar Sucic",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Kristijan Jakic",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Toni Fruk",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Igor Matanovic",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Luka Sucic",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Luka Vuskovic",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Dominik Kotarski",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Marco Pasalic",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Martin Erlic",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Petar Musa",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Curacao",
+      "fifa_team_name": "Curaçao",
+      "fifa_code": "CUW",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Eloy Room",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Shurandy Sambo",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Jurien Gaari",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Roshon Van Eijma",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Sherel Floranus",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Godfried Roemeratoe",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Juninho Bacuna",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Livano Comenencia",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Juergen Locadia",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Leandro Bacuna",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Jeremy Antonisse",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Sontje Hansen",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Tyrese Noslin",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "Kenji Gorre",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Arjany Martha",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Jearl Margaritha",
+          "number": 16,
+          "position": "atacante"
+        },
+        {
+          "name": "Brandley Kuwas",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Armando Obispo",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Gervane Kastaneer",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Joshua Brenet",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Tahith Chong",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Kevin Felida",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Riechedly Bazoer",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Deveron Fonville",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Tyrick Bodak",
+          "number": 25,
+          "position": "goleiro"
+        },
+        {
+          "name": "Trevor Doornbusch",
+          "number": 26,
+          "position": "goleiro"
+        }
+      ]
+    },
+    {
+      "team": "Czechia",
+      "fifa_team_name": "Czechia",
+      "fifa_code": "CZE",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Matej Kovar",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "David Zima",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Tomas Holes",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Robin Hranac",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Vladimir Coufal",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Stepan Chaloupek",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Ladislav Krejci",
+          "number": 7,
+          "position": "defensor"
+        },
+        {
+          "name": "Vladimir Darida",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Adam Hlozek",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Patrik Schick",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Jan Kuchta",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Lukas Cerv",
+          "number": 12,
+          "position": "meia"
+        },
+        {
+          "name": "Mojmir Chytil",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "David Jurasek",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Pavel Sulc",
+          "number": 15,
+          "position": "atacante"
+        },
+        {
+          "name": "Jindrich Stanek",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Lukas Provod",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Michal Sadilek",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Tomas Chory",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Jaroslav Zeleny",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "David Doudera",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Tomas Soucek",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Lukas Hornicek",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Alexandr Sojka",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Hugo Sochurek",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Denis Visinsky",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Ecuador",
+      "fifa_team_name": "Ecuador",
+      "fifa_code": "ECU",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Hernan Galindez",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Felix Torres",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Piero Hincapie",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Joel Ordonez",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Jordy Alcivar",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Willian Pacho",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Pervis Estupinan",
+          "number": 7,
+          "position": "defensor"
+        },
+        {
+          "name": "Anthony Valencia",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "John Yeboah",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Kendry Paez",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Kevin Rodriguez",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Moises Ramirez",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Enner Valencia",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "Alan Minda",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Pedro Vite",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Jordy Caicedo",
+          "number": 16,
+          "position": "atacante"
+        },
+        {
+          "name": "Angelo Preciado",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Denil Castillo",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Gonzalo Plata",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Nilson Angulo",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Alan Franco",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Gonzalo Valle",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Moises Caicedo",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Jeremy Arevalo",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Jackson Porozo",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Yaimar Medina",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Egypt",
+      "fifa_team_name": "Egypt",
+      "fifa_code": "EGY",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Mohamed Elshenawy",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Yasser Ibrahim",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohamed Hany",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Hossam Abdelmaguid",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Ramy Rabia",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohamed Abdelmoneim",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Mahmoud Hassan",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Emam Ashour",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Hamza Abdelkarim",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohamed Salah",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Mostafa Zico",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Haissem Hassan",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Ahmed Fatouh",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Hamdy Fathy",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Karim Hafez",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Mahdy Soliman",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Mohanad Lashin",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Nabil Donga",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Marawan Attia",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Ibrahim Adel",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Mahmoud Saber",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Omar Marmoush",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "Mostafa Shoubir",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Tarek Alaa",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Zizo",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohamed Alaa",
+          "number": 26,
+          "position": "goleiro"
+        }
+      ]
+    },
+    {
+      "team": "England",
+      "fifa_team_name": "England",
+      "fifa_code": "ENG",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Jordan Pickford",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ezri Konsa",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Nico Oreilly",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Declan Rice",
+          "number": 4,
+          "position": "meia"
+        },
+        {
+          "name": "John Stones",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Marc Guehi",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Bukayo Saka",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Elliot Anderson",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Harry Kane",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Jude Bellingham",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Marcus Rashford",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Tino Livramento",
+          "number": 12,
+          "position": "defensor"
+        },
+        {
+          "name": "Dean Henderson",
+          "number": 13,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jordan Henderson",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Dan Burn",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Kobbie Mainoo",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Morgan Rogers",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Anthony Gordon",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Ollie Watkins",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Noni Madueke",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Eberechi Eze",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Ivan Toney",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "James Trafford",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Reece James",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Djed Spence",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Jarell Quansah",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "France",
+      "fifa_team_name": "France",
+      "fifa_code": "FRA",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Brice Samba",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Malo Gusto",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Lucas Digne",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Dayot Upamecano",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Jules Kounde",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Manu Kone",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Ousmane Dembele",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Aurelien Tchouameni",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Marcus Thuram",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Kylian Mbappe",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Michael Olise",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Bradley Barcola",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Ngolo Kante",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Adrien Rabiot",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Ibrahima Konate",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Mike Maignan",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "William Saliba",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Warren Zaire-Emery",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Theo Hernandez",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Desire Doue",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Lucas Hernandez",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Jean-Philippe Mateta",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "Robin Risser",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Rayan Cherki",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Maghnes Akliouche",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Maxence Lacroix",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Germany",
+      "fifa_team_name": "Germany",
+      "fifa_code": "GER",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Manuel Neuer",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Antonio Ruediger",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Waldemar Anton",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Jonathan Tah",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Aleksandar Pavlovic",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Joshua Kimmich",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Kai Havertz",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Leon Goretzka",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Jamie Leweling",
+          "number": 9,
+          "position": "meia"
+        },
+        {
+          "name": "Jamal Musiala",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Nick Woltemade",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Oliver Baumann",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Pascal Gross",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Maximilian Beier",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Nico Schlotterbeck",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Angelo Stiller",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Florian Wirtz",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Nathaniel Brown",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Leroy Sane",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Nadiem Amiri",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Alexander Nuebel",
+          "number": 21,
+          "position": "goleiro"
+        },
+        {
+          "name": "David Raum",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Felix Nmecha",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Malick Thiaw",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Lennart Karl",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Deniz Undav",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Ghana",
+      "fifa_team_name": "Ghana",
+      "fifa_code": "GHA",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Lawrence Ati Zigi",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Alidu Seidu",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Caleb Yirenkyi",
+          "number": 3,
+          "position": "meia"
+        },
+        {
+          "name": "Jonas Adjetey",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Thomas Partey",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Abdul Mumin",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Fatawu Issahaku",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Kwasi Sibo",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Jordan Ayew",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Brandon Thomas-Asante",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Antoine Semenyo",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Joseph Anang",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Christopher Bonsu Baah",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "Gideon Mensah",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Elisha Owusu",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Benjamin Asare",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Baba Rahman",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Jerome Opoku",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Inaki Williams",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Augustine Boakye",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Kojo Peprah Oppong",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Kamaldeen Sulemana",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "Derrick Luckassen",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Ernest Nuamah",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Prince Adu",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Marvin Senaya",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Haiti",
+      "fifa_team_name": "Haiti",
+      "fifa_code": "HAI",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Johny Placide",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Carlens Arcus",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Keeto Thermoncy",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Ricardo Ade",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Hannes Delcroix",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Carl Sainte",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Derrick Etienne",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Martin Experience",
+          "number": 8,
+          "position": "defensor"
+        },
+        {
+          "name": "Duckens Nazon",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Jean-Ricner Bellegarde",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Louicius Deedson",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Alexandre Pierre",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Markhus Lacroix",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Leverton Pierre",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Ruben Providence",
+          "number": 15,
+          "position": "atacante"
+        },
+        {
+          "name": "Lenny Joseph",
+          "number": 16,
+          "position": "atacante"
+        },
+        {
+          "name": "Danley Jean Jacques",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Wilson Isidor",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Yassin Fortune",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Frantzdy Pierrot",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Josue Casimir",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Jean-Kevin Duverne",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Josue Duverger",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Wilguens Paugain",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Dominique Simon",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Woodensky Pierre",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Iran",
+      "fifa_team_name": "IR Iran",
+      "fifa_code": "IRN",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Alireza Beiranvand",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Saleh Hardani",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Ehsan Hajisafi",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Shoja Khalilzadeh",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Milad Mohammadi",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Saeid Ezatolahi",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Alireza Jahanbakhsh",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Mohammad Mohebbi",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Mehdi Taremi",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Mehdi Ghayedi",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Ali Alipour",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Payam Niazmand",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Hossein Kanani",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Saman Ghoddos",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Roozbeh Cheshmi",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Mehdi Torabi",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Arya Yousefi",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Amirhossein Hosseinzadeh",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Ali Nemati",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Shahriyar Moghanloo",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohammad Ghorbani",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Hossein Hosseini",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ramin Rezaeian",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Dennis Dargahi",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Danial Iri",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Amirmohammad Razaghinia",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Iraq",
+      "fifa_team_name": "Iraq",
+      "fifa_code": "IRQ",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Fahad Talib",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Rebin Ghareeb",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Hussein Ali",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Zaid Tahseen",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Akam Hashim",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Munaf Younus",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Youssef Amyn",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Ibrahim Bayesh",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Ali Alhamadi",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohanad Ali",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Ahmed Qasim",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Jalal Hassan",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ali Yousif",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "Zidane Iqbal",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Ahmed Yahya",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Amir Alammari",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Ali Jasim",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Aymen Hussein",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Kevin Yakob",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Aimar Sher",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Marko Farji",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Ahmed Basil",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Merchas Doski",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Zaid Ismael",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Mustafa Saadoon",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Frans Putros",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Japan",
+      "fifa_team_name": "Japan",
+      "fifa_code": "JPN",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Zion Suzuki",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Yukinari Sugawara",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Shogo Taniguchi",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Kou Itakura",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Yuto Nagatomo",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Wataru Endo",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Ao Tanaka",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Takefusa Kubo",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Keisuke Goto",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Ritsu Doan",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Daizen Maeda",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Keisuke Osako",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Keito Nakamura",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Junya Ito",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Daichi Kamada",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Tsuyoshi Watanabe",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Yuito Suzuki",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Ayase Ueda",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Koki Ogawa",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Ayumu Seko",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Hiroki Ito",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Takehiro Tomiyasu",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Tomoki Hayakawa",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Kaishu Sano",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Junnosuke Suzuki",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Kento Shiogai",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Jordan",
+      "fifa_team_name": "Jordan",
+      "fifa_code": "JOR",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Yazeed Abulaila",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Mohammad Abuhasheesh",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Abdallah Nasib",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Husam Abudahab",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Yazan Alarab",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Amer Jamous",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Mohammad Abuzraiq",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Noor Alrawabdeh",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Ali Olwan",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Mousa Altamari",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Odeh Fakhoury",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Nour Baniateyah",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Mahmoud Almardi",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "Rajaei Ayed",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Ibrahim Sadeh",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Mohammad Abualnadi",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Saleem Obaid",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Ibrahim Sabra",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Saed Alrosan",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohannad Abutaha",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Nizar Alrashdan",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Abdallah Alfakhori",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ehsan Haddad",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Ali Azaizeh",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohammad Aldaoud",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Anas Badawi",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "South Korea",
+      "fifa_team_name": "Korea Republic",
+      "fifa_code": "KOR",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Seunggyu Kim",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Hanbeom Lee",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Gihyuk Lee",
+          "number": 3,
+          "position": "meia"
+        },
+        {
+          "name": "Minjae Kim",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Taehyeon Kim",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Inbeom Hwang",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Heungmin Son",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Seungho Paik",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Guesung Cho",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Jaesung Lee",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Heechan Hwang",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Bumkeun Song",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Taeseok Lee",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Wije Cho",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Moonhwan Kim",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Jinseob Park",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Junho Bae",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Hyeongyu Oh",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Kangin Lee",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Hyunjun Yang",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Hyeonwoo Jo",
+          "number": 21,
+          "position": "goleiro"
+        },
+        {
+          "name": "Youngwoo Seol",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Jens Castrop",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Jingyu Kim",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Jisung Eom",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Donggyeong Lee",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Mexico",
+      "fifa_team_name": "Mexico",
+      "fifa_code": "MEX",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Raul Rangel",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jorge Sanchez",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Cesar Montes",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Edson Alvarez",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Johan Vasquez",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Erik Lira",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Luis Romo",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Alvaro Fidalgo",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Raul Jimenez",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Alexis Vega",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Santiago Gimenez",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Carlos Acevedo",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Guillermo Ochoa",
+          "number": 13,
+          "position": "goleiro"
+        },
+        {
+          "name": "Armando Gonzalez",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Israel Reyes",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Julian Quinones",
+          "number": 16,
+          "position": "atacante"
+        },
+        {
+          "name": "Orbelin Pineda",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Obed Vargas",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Gilberto Mora",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Mateo Chavez",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Cesar Huerta",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Guillermo Martinez",
+          "number": 22,
+          "position": "atacante"
+        },
+        {
+          "name": "Jesus Gallardo",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Luis Chavez",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Roberto Alvarado",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Brian Gutierrez",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Morocco",
+      "fifa_team_name": "Morocco",
+      "fifa_code": "MAR",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Yassine Bounou",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Achraf Hakimi",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Noussair Mazraoui",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Sofyan Amrabat",
+          "number": 4,
+          "position": "meia"
+        },
+        {
+          "name": "Nayef Aguerd",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Ayyoub Bouaddi",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Chemsdine Talbi",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Azzedine Ounahi",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Sou«ane Rahimi",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Brahim Diaz",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Ismael Saibari",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Munir El Kajoui",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Zakaria El Ouahdi",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Issa Diop",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Samir El Mourabet",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Gessime Yassine",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Abde Ezzalzouli",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Chadi Riad",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Youssef Belammari",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Ayoub El Kaabi",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Ayoub Amaimouni",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Ahmed Reda Tagnaouti",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Bilal El Khannouss",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Neil El Aynaoui",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Redouane Halhal",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Anass Salah Eddine",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Netherlands",
+      "fifa_team_name": "Netherlands",
+      "fifa_code": "NED",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Bart Verbruggen",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jurrien Timber",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Marten De Roon",
+          "number": 3,
+          "position": "meia"
+        },
+        {
+          "name": "Virgil Van Dijk",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Nathan Ake",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Jan Paul Van Hecke",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Justin Kluivert",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Ryan Gravenberch",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Wout Weghorst",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Memphis Depay",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Cody Gakpo",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Mats Wieffer",
+          "number": 12,
+          "position": "defensor"
+        },
+        {
+          "name": "Robin Roefs",
+          "number": 13,
+          "position": "goleiro"
+        },
+        {
+          "name": "Tijjani Reijnders",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Micky Van De Ven",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Guus Til",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Noa Lang",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Donyell Malen",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Brian Brobbey",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Teun Koopmeiners",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Frenkie De Jong",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Denzel Dumfries",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Mark Flekken",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Crysencio Summerville",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Jorrel Hato",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Quinten Timber",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "New Zealand",
+      "fifa_team_name": "New Zealand",
+      "fifa_code": "NZL",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Max Crocombe",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Tim Payne",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Francis De Vries",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Tyler Bindon",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Michael Boxall",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Joe Bell",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Matthew Garbett",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Marko Stamenic",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Chris Wood",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Sarpreet Singh",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Elijah Just",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Alex Paulsen",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Liberato Cacace",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Alex Rufer",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Nando Pijnaker",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Finn Surman",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Kosta Barbarouses",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Ben Waine",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Ben Old",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "McCOWATT Callum",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Jesse Randall",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Michael Woud",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ryan Thomas",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Callan Elliot",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Lachlan Bayliss",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Tommy Smith",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Norway",
+      "fifa_team_name": "Norway",
+      "fifa_code": "NOR",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Orjan Nyland",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Morten Thorsby",
+          "number": 2,
+          "position": "meia"
+        },
+        {
+          "name": "Kristoffer Ajer",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Leo Ostigard",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "David Moller Wolfe",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Patrick Berg",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Alexander Sorloth",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Sander Berge",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Erling Haaland",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Martin Odegaard",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Jorgen Strand Larsen",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Sander Tangvik",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Egil Selvik",
+          "number": 13,
+          "position": "goleiro"
+        },
+        {
+          "name": "Fredrik Aursnes",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Fredrik Andre Bjorkan",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Marcus Holmgren Pedersen",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Torbjorn Heggem",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Kristian Thorstvedt",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Thelo Aasgaard",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Antonio Nusa",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Andreas Schjelderup",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Oscar Bobb",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Jens Petter Hauge",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Sondre Langas",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Henrik Falchener",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Julian Ryerson",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Panama",
+      "fifa_team_name": "Panama",
+      "fifa_code": "PAN",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Luis Mejia",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Cesar Blackman",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Jose Cordoba",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Fidel Escobar",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Edgardo Farina",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Cristian Martinez",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Jose Luis Rodriguez",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Adalberto Carrasquilla",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Tomas Rodriguez",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Ismael Diaz",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Edgar Yoel Barcenas",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Cesar Samudio",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jiovany Ramos",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Carlos Harvey",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Eric Davis",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Andres Andrade",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Jose Fajardo",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Cecilio Waterman",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Alberto Quintero",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Anibal Godoy",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Cesar Yanis",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Orlando Mosquera",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Amir Murillo",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Azarias Londono",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Roderick Miller",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Jorge Gutierrez",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Paraguay",
+      "fifa_team_name": "Paraguay",
+      "fifa_code": "PAR",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Gatito Fernandez",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Gustavo Velazquez",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Omar Alderete",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Juan Jose Caceres",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Fabian Balbuena",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Junior Alonso",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Ramon Sosa",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Diego Gomez",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Antonio Sanabria",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Miguel Almiron",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Mauricio",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Orlando Gill",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jose Canale",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Andres Cubas",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Gustavo Gomez",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Damian Bobadilla",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Alejandro Romero Gamarra",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Alex Arce",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Julio Enciso",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Braian Ojeda",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Gabriel Avalos",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Gaston Olveira",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Matias Galarza",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Gustavo Caballero",
+          "number": 24,
+          "position": "meia"
+        },
+        {
+          "name": "Isidro Pitta",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Alexandro Maidana",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Portugal",
+      "fifa_team_name": "Portugal",
+      "fifa_code": "POR",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Diogo Costa",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Nelson Semedo",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Ruben Dias",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Tomas Araujo",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Diogo Dalot",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Matheus Nunes",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Cristiano Ronaldo",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Bruno Fernandes",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Goncalo Ramos",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Bernardo Silva",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Joao Felix",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Jose Sa",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Renato Veiga",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Goncalo Inacio",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Joao Neves",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Francisco Trincao",
+          "number": 16,
+          "position": "atacante"
+        },
+        {
+          "name": "Rafael Leao",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Pedro Neto",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Goncalo Guedes",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Joao Cancelo",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Ruben Neves",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Rui Silva",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Vitinha",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Samu Costa",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Nuno Mendes",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Francisco Conceicao",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Qatar",
+      "fifa_team_name": "Qatar",
+      "fifa_code": "QAT",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Mahmoud Abunada",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Pedro Miguel",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Lucas Mendes",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Issa Laye",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Jassem Gaber",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Abdulaziz Hatem",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Ahmed Alaaeldin",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Edmilson Junior",
+          "number": 8,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohammed Muntari",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Hassan Alhaydos",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Akram Afif",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Karim Boudiaf",
+          "number": 12,
+          "position": "meia"
+        },
+        {
+          "name": "Ayoub Aloui",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Homam Ahmed",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Yusuf Abdurisag",
+          "number": 15,
+          "position": "atacante"
+        },
+        {
+          "name": "Boualem Khoukhi",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Ahmed Alganehi",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Sultan Albrake",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Almoez Ali",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Ahmed Fathy",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Salah Zakaria",
+          "number": 21,
+          "position": "goleiro"
+        },
+        {
+          "name": "Meshaal Barsham",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Assim Madibo",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Tahsin Jamshid",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Alhashmi Alhussein",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohamed Manai",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Saudi Arabia",
+      "fifa_team_name": "Saudi Arabia",
+      "fifa_code": "KSA",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Nawaf Alaqidi",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ali Majrashi",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Ali Lajami",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Abdulelah Alamri",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Hassan Altambakti",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Nasser Aldawsari",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Musab Aljuwayr",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Aiman Yahya",
+          "number": 8,
+          "position": "atacante"
+        },
+        {
+          "name": "Feras Albrikan",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Salem Aldawsari",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Saleh Alshehri",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Saud Abdulhamid",
+          "number": 12,
+          "position": "defensor"
+        },
+        {
+          "name": "Nawaf Bu Washl",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Hassan Kadish",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Abdullah Alkhaibari",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Ziyad Aljohani",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Khalid Alghannam",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Ala Alhajji",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Abdullah Alhamddan",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Sultan Mandash",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Mohammed Alowais",
+          "number": 21,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ahmed Alkassar",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Mohamed Kanno",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Moteb Alharbi",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Jehad Thikri",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohammed Abu Alshamat",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Scotland",
+      "fifa_team_name": "Scotland",
+      "fifa_code": "SCO",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Angus Gunn",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Aaron Hickey",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Andy Robertson",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "McTOMINAY Scott",
+          "number": 4,
+          "position": "meia"
+        },
+        {
+          "name": "Grant Hanley",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Kieran Tierney",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "McGINN John",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Tyler Fletcher",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Lyndon Dykes",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Che Adams",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Ryan Christie",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Liam Kelly",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jack Hendry",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Ross Stewart",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "John Souttar",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Dominic Hyam",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Ben Gannon-Doak",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "George Hirst",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Lewis Ferguson",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Lawrence Shankland",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Craig Gordon",
+          "number": 21,
+          "position": "goleiro"
+        },
+        {
+          "name": "Nathan Patterson",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "McLEAN Kenny",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Anthony Ralston",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Findlay Curtis",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "McKENNA Scott",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Senegal",
+      "fifa_team_name": "Senegal",
+      "fifa_code": "SEN",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Yehvann Diouf",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Mamadou Sarr",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Kalidou Koulibaly",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Abdoulaye Seck",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Idrissa Gana Gueye",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Pathe Ciss",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Assane Diao",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Lamine Camara",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Bamba Dieng",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Sadio Mane",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Nicolas Jackson",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Cherif Ndiaye",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Iliman Ndiaye",
+          "number": 13,
+          "position": "atacante"
+        },
+        {
+          "name": "Ismail Jakobs",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Krepin Diatta",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Edouard Mendy",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Pape Matar Sarr",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Ismaila Sarr",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Moussa Niakhate",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Ibrahim Mbaye",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Habib Diarra",
+          "number": 21,
+          "position": "meia"
+        },
+        {
+          "name": "Bara Sapoko Ndiaye",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Mory Diaw",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Antoine Mendy",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "El Hadji Malick Diouf",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Pape Gueye",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "South Africa",
+      "fifa_team_name": "South Africa",
+      "fifa_code": "RSA",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Ronwen Williams",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Thabang Matuludi",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Khulumani Ndamane",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Teboho Mokoena",
+          "number": 4,
+          "position": "meia"
+        },
+        {
+          "name": "Thalente Mbatha",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Aubrey Modiba",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Oswin Appollis",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Tshepang Moremi",
+          "number": 8,
+          "position": "atacante"
+        },
+        {
+          "name": "Lyle Foster",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Relebohile Mofokeng",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Themba Zwane",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Thapelo Maseko",
+          "number": 12,
+          "position": "atacante"
+        },
+        {
+          "name": "Sphephelo Sithole",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Mbekezeli Mbokazi",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Iqraam Rayners",
+          "number": 15,
+          "position": "atacante"
+        },
+        {
+          "name": "Sipho Chaine",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Evidence Makgopa",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Samukelo Kabini",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Nkosinathi Sibisi",
+          "number": 19,
+          "position": "defensor"
+        },
+        {
+          "name": "Khuliso Mudau",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Ime Okon",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Ricardo Goss",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jayden Adams",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Olwethu Makhanya",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Kamogelo Sebelebele",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Bradley Cross",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    },
+    {
+      "team": "Spain",
+      "fifa_team_name": "Spain",
+      "fifa_code": "ESP",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "David Raya",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Marc Pubill",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Alex Grimaldo",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Eric Garcia",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Marcos Llorente",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Mikel Merino",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Ferran Torres",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Fabian Ruiz",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Gavi",
+          "number": 9,
+          "position": "meia"
+        },
+        {
+          "name": "Dani Olmo",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Yeremy Pino",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Pedro Porro",
+          "number": 12,
+          "position": "defensor"
+        },
+        {
+          "name": "Joan Garcia",
+          "number": 13,
+          "position": "goleiro"
+        },
+        {
+          "name": "Aymeric Laporte",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Alex Baena",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Rodri",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Nico Williams",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Martin Zubimendi",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Lamine Yamal",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Pedri",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Pau Cubarsi",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Unai Simon",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Marc Cucurella",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Victor Munoz",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Borja Iglesias",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Sweden",
+      "fifa_team_name": "Sweden",
+      "fifa_code": "SWE",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Jacob Widell Zetterstrom",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Gustaf Lagerbielke",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Victor Lindelof",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Isak Hien",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Gabriel Gudmundsson",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Herman Johansson",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Lucas Bergvall",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Daniel Svensson",
+          "number": 8,
+          "position": "defensor"
+        },
+        {
+          "name": "Alexander Isak",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Benjamin Nygren",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Anthony Elanga",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Viktor Johansson",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ken Sema",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Hjalmar Ekdal",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Carl Starfelt",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Jesper Karlstrom",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Viktor Gyokeres",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Yasin Ayari",
+          "number": 18,
+          "position": "meia"
+        },
+        {
+          "name": "Mattias Svanberg",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Eric Smith",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Alexander Bernhardsson",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Besfort Zeneli",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Kristoffer Nordfeldt",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Elliot Stroud",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Gustaf Nilsson",
+          "number": 25,
+          "position": "atacante"
+        },
+        {
+          "name": "Taha Ali",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Switzerland",
+      "fifa_team_name": "Switzerland",
+      "fifa_code": "SUI",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Gregor Kobel",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Miro Muheim",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Silvan Widmer",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Nico Elvedi",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Manuel Akanji",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Denis Zakaria",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Breel Embolo",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Remo Freuler",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Johan Manzambi",
+          "number": 9,
+          "position": "meia"
+        },
+        {
+          "name": "Granit Xhaka",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Dan Ndoye",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Yvon Mvogo",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ricardo Rodriguez",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Ardon Jashari",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Djibril Sow",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Christian Fassnacht",
+          "number": 16,
+          "position": "atacante"
+        },
+        {
+          "name": "Ruben Vargas",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Eray Coemert",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Noah Okafor",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Michel Aebischer",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Marvin Keller",
+          "number": 21,
+          "position": "goleiro"
+        },
+        {
+          "name": "Fabian Rieder",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Zeki Amdouni",
+          "number": 23,
+          "position": "atacante"
+        },
+        {
+          "name": "Aurele Amenda",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Luca Jaquez",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Cedric Itten",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Tunisia",
+      "fifa_team_name": "Tunisia",
+      "fifa_code": "TUN",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Mouhib Chamakh",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ali Abdi",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Montassar Talbi",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Omar Rekik",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Adam Arous",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Dylan Bronn",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Elias Achouri",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Elias Saad",
+          "number": 8,
+          "position": "atacante"
+        },
+        {
+          "name": "Hazem Mastouri",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Hannibal Mejbri",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Ismael Gharbi",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Mortadha Ben Ouanes",
+          "number": 12,
+          "position": "defensor"
+        },
+        {
+          "name": "Rani Khedira",
+          "number": 13,
+          "position": "meia"
+        },
+        {
+          "name": "Khalil Ayari",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Mohamed Hadj Mahmoud",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Aymen Dahmen",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Ellyes Skhiri",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Rayan Elloumi",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Firas Chaouat",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Yan Valery",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Mohamed Amine Ben Hmida",
+          "number": 21,
+          "position": "defensor"
+        },
+        {
+          "name": "Sabri Ben Hessen",
+          "number": 22,
+          "position": "goleiro"
+        },
+        {
+          "name": "Moutaz Neffati",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Raed Chikhaoui",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Anis Slimane",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Sebastian Tounekti",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "Turkiye",
+      "fifa_team_name": "Türkiye",
+      "fifa_code": "TUR",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Mert Gunok",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Zeki Celik",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Merih Demiral",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Caglar Soyuncu",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Salih Ozcan",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Orkun Kokcu",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Kerem Akturkoglu",
+          "number": 7,
+          "position": "atacante"
+        },
+        {
+          "name": "Arda Guler",
+          "number": 8,
+          "position": "atacante"
+        },
+        {
+          "name": "Deniz Gul",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Hakan Calhanoglu",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Kenan Yildiz",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Altay Bayindir",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Eren Elmali",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Abdulkerim Bardakci",
+          "number": 14,
+          "position": "defensor"
+        },
+        {
+          "name": "Ozan Kabak",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Ismail Yuksek",
+          "number": 16,
+          "position": "meia"
+        },
+        {
+          "name": "Irfan Can Kahveci",
+          "number": 17,
+          "position": "atacante"
+        },
+        {
+          "name": "Mert Muldur",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Yunus Akgun",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Ferdi Kadioglu",
+          "number": 20,
+          "position": "defensor"
+        },
+        {
+          "name": "Baris Alper Yilmaz",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Kaan Ayhan",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Ugurcan Cakir",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Oguz Aydin",
+          "number": 24,
+          "position": "atacante"
+        },
+        {
+          "name": "Samet Akaydin",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Can Uzun",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Uruguay",
+      "fifa_team_name": "Uruguay",
+      "fifa_code": "URU",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Sergio Rochet",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Jose Maria Gimenez",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Sebastian Caceres",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Ronald Araujo",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Manuel Ugarte",
+          "number": 5,
+          "position": "meia"
+        },
+        {
+          "name": "Rodrigo Bentancur",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Nicolas De La Cruz",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Federico Valverde",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Darwin Nunez",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Giorgian De Arrascaeta",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Facundo Pellistri",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Santiago Mele",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Guillermo Varela",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Agustin Canobbio",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Emiliano Martinez",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Mathias Olivera",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Matias Vina",
+          "number": 17,
+          "position": "defensor"
+        },
+        {
+          "name": "Brian Rodriguez",
+          "number": 18,
+          "position": "atacante"
+        },
+        {
+          "name": "Rodrigo Aguirre",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Maxi Araujo",
+          "number": 20,
+          "position": "meia"
+        },
+        {
+          "name": "Federico Vinas",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Joaquin Piquerez",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Fernando Muslera",
+          "number": 23,
+          "position": "goleiro"
+        },
+        {
+          "name": "Santiago Bueno",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Juan Manuel Sanabria",
+          "number": 25,
+          "position": "meia"
+        },
+        {
+          "name": "Rodrigo Zalazar",
+          "number": 26,
+          "position": "meia"
+        }
+      ]
+    },
+    {
+      "team": "United States",
+      "fifa_team_name": "USA",
+      "fifa_code": "USA",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Matt Turner",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Sergino Dest",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Chris Richards",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Tyler Adams",
+          "number": 4,
+          "position": "meia"
+        },
+        {
+          "name": "Antonee Robinson",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Auston Trusty",
+          "number": 6,
+          "position": "defensor"
+        },
+        {
+          "name": "Giovanni Reyna",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "McKENNIE Weston",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Ricardo Pepi",
+          "number": 9,
+          "position": "atacante"
+        },
+        {
+          "name": "Christian Pulisic",
+          "number": 10,
+          "position": "atacante"
+        },
+        {
+          "name": "Brenden Aaronson",
+          "number": 11,
+          "position": "atacante"
+        },
+        {
+          "name": "Miles Robinson",
+          "number": 12,
+          "position": "defensor"
+        },
+        {
+          "name": "Tim Ream",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Sebastian Berhalter",
+          "number": 14,
+          "position": "meia"
+        },
+        {
+          "name": "Cristian Roldan",
+          "number": 15,
+          "position": "meia"
+        },
+        {
+          "name": "Alex Freeman",
+          "number": 16,
+          "position": "defensor"
+        },
+        {
+          "name": "Malik Tillman",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Max Arfsten",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Haji Wright",
+          "number": 19,
+          "position": "atacante"
+        },
+        {
+          "name": "Folarin Balogun",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Timothy Weah",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "McKENZIE Mark",
+          "number": 22,
+          "position": "defensor"
+        },
+        {
+          "name": "Joe Scally",
+          "number": 23,
+          "position": "defensor"
+        },
+        {
+          "name": "Matt Freese",
+          "number": 24,
+          "position": "goleiro"
+        },
+        {
+          "name": "Chris Brady",
+          "number": 25,
+          "position": "goleiro"
+        },
+        {
+          "name": "Alex Zendejas",
+          "number": 26,
+          "position": "atacante"
+        }
+      ]
+    },
+    {
+      "team": "Uzbekistan",
+      "fifa_team_name": "Uzbekistan",
+      "fifa_code": "UZB",
+      "numbers_status": "complete_official_fifa",
+      "players": [
+        {
+          "name": "Utkir Yusupov",
+          "number": 1,
+          "position": "goleiro"
+        },
+        {
+          "name": "Abdukodir Khusanov",
+          "number": 2,
+          "position": "defensor"
+        },
+        {
+          "name": "Khojiakbar Alijonov",
+          "number": 3,
+          "position": "defensor"
+        },
+        {
+          "name": "Farrukh Sayfiev",
+          "number": 4,
+          "position": "defensor"
+        },
+        {
+          "name": "Rustam Ashurmatov",
+          "number": 5,
+          "position": "defensor"
+        },
+        {
+          "name": "Akmal Mozgovoy",
+          "number": 6,
+          "position": "meia"
+        },
+        {
+          "name": "Otabek Shukurov",
+          "number": 7,
+          "position": "meia"
+        },
+        {
+          "name": "Jamshid Iskanderov",
+          "number": 8,
+          "position": "meia"
+        },
+        {
+          "name": "Odiljon Xamrobekov",
+          "number": 9,
+          "position": "meia"
+        },
+        {
+          "name": "Jaloliddin Masharipov",
+          "number": 10,
+          "position": "meia"
+        },
+        {
+          "name": "Oston Urunov",
+          "number": 11,
+          "position": "meia"
+        },
+        {
+          "name": "Abduvohid Nematov",
+          "number": 12,
+          "position": "goleiro"
+        },
+        {
+          "name": "Sherzod Nasrullaev",
+          "number": 13,
+          "position": "defensor"
+        },
+        {
+          "name": "Eldor Shomurodov",
+          "number": 14,
+          "position": "atacante"
+        },
+        {
+          "name": "Umar Eshmurodov",
+          "number": 15,
+          "position": "defensor"
+        },
+        {
+          "name": "Botirali Ergashev",
+          "number": 16,
+          "position": "goleiro"
+        },
+        {
+          "name": "Dostonbek Khamdamov",
+          "number": 17,
+          "position": "meia"
+        },
+        {
+          "name": "Abdulla Abdullaev",
+          "number": 18,
+          "position": "defensor"
+        },
+        {
+          "name": "Azizjon Ganiev",
+          "number": 19,
+          "position": "meia"
+        },
+        {
+          "name": "Azizbek Amonov",
+          "number": 20,
+          "position": "atacante"
+        },
+        {
+          "name": "Igor Sergeev",
+          "number": 21,
+          "position": "atacante"
+        },
+        {
+          "name": "Abbosbek Fayzullaev",
+          "number": 22,
+          "position": "meia"
+        },
+        {
+          "name": "Sherzod Esanov",
+          "number": 23,
+          "position": "meia"
+        },
+        {
+          "name": "Behruzjon Karimov",
+          "number": 24,
+          "position": "defensor"
+        },
+        {
+          "name": "Avazbek Ulmasaliyev",
+          "number": 25,
+          "position": "defensor"
+        },
+        {
+          "name": "Jakhongir Urozov",
+          "number": 26,
+          "position": "defensor"
+        }
+      ]
+    }
+  ]
+}

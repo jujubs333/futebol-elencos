@@ -395,23 +395,46 @@ async function buscarTodosElencos() {
   console.log(`\n📊 Resumo:`);
   console.log(`   ✅ Sucessos: ${sucessos}`);
   console.log(`   ❌ Falhas: ${falhas}`);
-  console.log(`   📦 Total de times com elenco: ${Object.keys(elencos).length}`);
+  console.log(`   📦 Total de times com elenco (nesta execução): ${Object.keys(elencos).length}`);
 
   // 4. Verificar se houve falhas
   if (falhas > 0) {
     console.log(`\n⚠️ ATENÇÃO: ${falhas} time(s) falharam!`);
-    console.log(`   O arquivo elencos.json será atualizado com os ${sucessos} time(s) que tiveram sucesso.\n`);
+    console.log(`   O arquivo elencos.json será atualizado preservando os dados antigos dos times que falharam.\n`);
   }
 
   // 5. Salvar JSON
   console.log(`\n💾 Salvando arquivo elencos.json...`);
   
   fs.mkdirSync('data', { recursive: true });
+
+  // --- NOVA LÓGICA DE PROTEÇÃO DE DADOS ---
+  let elencosFinais = {};
+  
+  // Tenta ler o arquivo antigo para não perder dados de times que falharam agora
+  if (fs.existsSync('data/elencos.json')) {
+    try {
+      const arquivoAntigo = fs.readFileSync('data/elencos.json', 'utf8');
+      const jsonAntigo = JSON.parse(arquivoAntigo);
+      if (jsonAntigo && jsonAntigo.elencos) {
+        elencosFinais = jsonAntigo.elencos;
+        console.log(`   ✅ Recuperados dados anteriores de ${Object.keys(elencosFinais).length} times.`);
+      }
+    } catch (err) {
+      console.log(`   ⚠️ Não foi possível ler o arquivo antigo. Criando dados do zero.`);
+    }
+  }
+
+  // Mescla os times que tiveram sucesso nesta execução com os dados antigos
+  for (const [id, elencoAtualizado] of Object.entries(elencos)) {
+    elencosFinais[id] = elencoAtualizado;
+  }
+  // ----------------------------------------
   
   const dadosFinais = {
-    elencos,
+    elencos: elencosFinais,
     ultima_atualizacao: new Date().toISOString(),
-    total_times: Object.keys(elencos).length,
+    total_times: Object.keys(elencosFinais).length,
   };
   
   fs.writeFileSync(
@@ -421,7 +444,7 @@ async function buscarTodosElencos() {
   );
 
   console.log('   ✅ Arquivo salvo em data/elencos.json');
-  console.log(`\n🎉 Processo concluído! ${sucessos} times atualizados.\n`);
+  console.log(`\n🎉 Processo concluído! Arquivo final contendo ${dadosFinais.total_times} times.\n`);
 }
 
 // Executar

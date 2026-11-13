@@ -1,14 +1,28 @@
+// Robô de elencos do Você Escala — fonte: API pública da ESPN (sem chave).
+// Grava data/elencos.json NO MESMO FORMATO de antes, para o app não precisar mudar:
+//   { elencos: { "<id do DB_TIMES>": [{ id, nome, posicao, numero }] }, ultima_atualizacao, total_times }
+// posicao continua em inglês (Goalkeeper/Defender/Midfielder/Attacker), como o app espera.
+
 const fs = require('fs');
 const https = require('https');
 
-const API_KEY = process.env.API_KEY;
+// Ligas da ESPN onde procurar os times da planilha
+const LIGAS_ESPN = ['bra.1', 'bra.2'];
 
-if (!API_KEY) {
-  console.error('❌ ERRO: API_KEY não encontrada nas variáveis de ambiente!');
-  process.exit(1);
-}
+// Nomes da ESPN que não batem com os nossos (já normalizados: sem acento, minúsculo, só letras/números)
+const APELIDOS_ESPN = {
+  athleticopr: 'athleticoparanaense',
+  atleticomg: 'atleticomineiro',
+  redbullbragantino: 'bragantino',
+};
 
-// Banco de dados de times
+// Regras do filtro do elenco "inchado" da ESPN
+const MINIMO_JOGADORES_ESPN = 18; // menos que isso = resposta incompleta, não mexe no time
+const CAMISA_MAXIMA = 35;         // base costuma usar 40+
+const MINIMO_GOLEIROS = 3;
+const JOGOS_PARA_FILTRAR = 5;     // se ninguém do time tem 5+ jogos (início de temporada), não filtra
+
+// Banco de dados de times (ids usados como chave no elencos.json e no app)
 const DB_TIMES = [
   // SÉRIE A
   {nome: 'Palmeiras', id: 121},
@@ -116,175 +130,154 @@ const DB_TIMES = [
   {nome: 'Uberlândia', id: 1196},
   {nome: 'Monte Azul', id: 10021},
   {nome: 'Itabirito', id: 21165},
-  // COPA DO MUNDO (Não serão buscados pela API)
-  { nome: 'África do Sul', id: 2001 },
-  { nome: 'Alemanha', id: 25 },
-  { nome: 'Arábia Saudita', id: 2003 },
-  { nome: 'Argélia', id: 2004 },
-  { nome: 'Argentina', id: 26 },
-  { nome: 'Austrália', id: 2006 },
-  { nome: 'Áustria', id: 2007 },
-  { nome: 'Bélgica', id: 1 },
-  { nome: 'Bósnia e Herzegovina', id: 2009 },
-  { nome: 'Brasil', id: 6 },
-  { nome: 'Cabo Verde', id: 2011 },
-  { nome: 'Canadá', id: 2012 },
-  { nome: 'Catar', id: 2013 },
-  { nome: 'Chéquia', id: 2014 },
-  { nome: 'Colômbia', id: 8 },
-  { nome: 'Coreia do Sul', id: 2016 },
-  { nome: 'Costa do Marfim', id: 2017 },
-  { nome: 'Croácia', id: 3 },
-  { nome: 'Curaçao', id: 2019 },
-  { nome: 'Egito', id: 2020 },
-  { nome: 'Equador', id: 2021 },
-  { nome: 'Escócia', id: 2022 },
-  { nome: 'Espanha', id: 9 },
-  { nome: 'EUA', id: 2024 },
-  { nome: 'França', id: 2 },
-  { nome: 'Gana', id: 2026 },
-  { nome: 'Haiti', id: 2027 },
-  { nome: 'Holanda', id: 1118 },
-  { nome: 'Inglaterra', id: 10 },
-  { nome: 'Irã', id: 2030 },
-  { nome: 'Iraque', id: 2031 },
-  { nome: 'Japão', id: 12 },
-  { nome: 'Jordânia', id: 2033 },
-  { nome: 'Marrocos', id: 2034 },
-  { nome: 'México', id: 16 },
-  { nome: 'Noruega', id: 2036 },
-  { nome: 'Nova Zelândia', id: 2037 },
-  { nome: 'Panamá', id: 2038 },
-  { nome: 'Paraguai', id: 2039 },
-  { nome: 'Portugal', id: 27 },
-  { nome: 'RD Congo', id: 2041 },
-  { nome: 'Senegal', id: 2042 },
-  { nome: 'Suécia', id: 2043 },
-  { nome: 'Suíça', id: 2044 },
-  { nome: 'Tunísia', id: 2045 },
-  { nome: 'Turquia', id: 2046 },
-  { nome: 'Uruguai', id: 7 },
-  { nome: 'Uzbequistão', id: 2048 }
 ];
+
+const POSICOES = { G: 'Goalkeeper', D: 'Defender', M: 'Midfielder', F: 'Attacker' };
 
 // Função para remover acentos
 function removeAccents(str) {
-  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return str.normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
 
-// Função para fazer requisição HTTPS com suporte a redirecionamentos
-function fetchHTTPS(url, options = {}, redirectCount = 0) {
-  return new Promise((resolve, reject) => {
-    if (redirectCount > 5) {
-      return reject(new Error('Muitos redirecionamentos'));
-    }
+// Para casar nomes: sem acento, minúsculo, só letras e números ("Operário PR" = "Operario-PR")
+function chaveNome(str) {
+  return removeAccents(String(str).toLowerCase()).replace(/[^a-z0-9]/g, '');
+}
 
-    const req = https.get(url, options, (res) => {
-      // Se for redirecionamento (301, 302, 307, 308), seguir
+// Requisição HTTPS com suporte a redirecionamentos
+function fetchHTTPS(url, redirectCount = 0) {
+  return new Promise((resolve, reject) => {
+    if (redirectCount > 5) return reject(new Error('Muitos redirecionamentos'));
+
+    const req = https.get(url, { headers: { 'User-Agent': 'voceescala-elencos/1.0' } }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetchHTTPS(res.headers.location, options, redirectCount + 1)
-          .then(resolve)
-          .catch(reject);
+        res.resume();
+        return fetchHTTPS(res.headers.location, redirectCount + 1).then(resolve).catch(reject);
+      }
+      if (res.statusCode !== 200) {
+        res.resume();
+        return reject(new Error(`HTTP ${res.statusCode}`));
       }
 
       let data = '';
-      
-      res.on('data', (chunk) => {
-        data += chunk;
-      });
-      
+      res.setEncoding('utf8');
+      res.on('data', (chunk) => { data += chunk; });
       res.on('end', () => {
-        // Se parecer JSON, tenta parsear
-        if (data.trim().startsWith('{') || data.trim().startsWith('[')) {
-          try {
-            resolve(JSON.parse(data));
-          } catch (e) {
-            resolve(data);
-          }
-        } else {
-          // Retorna como texto (CSV)
-          resolve(data);
+        const t = data.trim();
+        if (t.startsWith('{') || t.startsWith('[')) {
+          try { return resolve(JSON.parse(t)); } catch (e) { /* cai para texto */ }
         }
+        resolve(data); // CSV
       });
     });
-    
+
     req.on('error', reject);
-    req.setTimeout(10000, () => {
-      req.destroy();
-      reject(new Error('Timeout'));
-    });
+    req.setTimeout(15000, () => { req.destroy(); reject(new Error('Timeout')); });
   });
 }
 
-// Função para buscar elenco de um time da API
-async function buscarElencoAPI(timeId, tentativa = 1) {
-  const MAX_TENTATIVAS = 3;
-  
-  try {
-    const url = `https://v3.football.api-sports.io/players/squads?team=${timeId}`;
-    const data = await fetchHTTPS(url, {
-      headers: {
-        'x-rapidapi-host': 'v3.football.api-sports.io',
-        'x-rapidapi-key': API_KEY,
-      },
-    });
-
-    if (data.response && data.response[0]?.players) {
-      const jogadores = data.response[0].players.map((j) => ({
-        id: j.id,
-        nome: j.name,
-        posicao: j.position,
-        numero: j.number,
-      }));
-      console.log(`   ✅ ${jogadores.length} jogadores encontrados`);
-      return jogadores;
-    }
-
-    // Tentar endpoint alternativo
-    const url2 = `https://v3.football.api-sports.io/players?team=${timeId}&season=2024&page=1`;
-    const data2 = await fetchHTTPS(url2, {
-      headers: {
-        'x-rapidapi-host': 'v3.football.api-sports.io',
-        'x-rapidapi-key': API_KEY,
-      },
-    });
-
-    if (data2.response && data2.response.length > 0) {
-      const jogadores = data2.response.map((item) => ({
-        id: item.player.id,
-        nome: item.player.name,
-        posicao: item.statistics[0]?.games?.position || 'Unknown',
-        numero: item.statistics[0]?.games?.number || null,
-      }));
-      console.log(`   ✅ ${jogadores.length} jogadores encontrados`);
-      return jogadores;
-    }
-
-    console.log(`   ⚠️  Nenhum jogador encontrado`);
-    return [];
-  } catch (error) {
-    console.log(`   ❌ Erro: ${error.message}`);
-    
-    // Retry com backoff exponencial
-    if (tentativa < MAX_TENTATIVAS) {
-      const waitTime = tentativa * 3000;
-      console.log(`   🔄 Retry ${tentativa + 1}/${MAX_TENTATIVAS} em ${waitTime/1000}s...`);
-      await delay(waitTime);
-      return buscarElencoAPI(timeId, tentativa + 1);
-    }
-    
-    return [];
-  }
-}
-
-// Função para aguardar X milissegundos
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// Tenta até 3 vezes
+async function fetchComRetry(url, tentativa = 1) {
+  try {
+    return await fetchHTTPS(url);
+  } catch (error) {
+    if (tentativa >= 3) throw error;
+    console.log(`   🔄 ${error.message} — tentando de novo (${tentativa + 1}/3)...`);
+    await delay(tentativa * 3000);
+    return fetchComRetry(url, tentativa + 1);
+  }
+}
+
+// Lista de times de cada liga na ESPN: chaveNome -> { espnId, liga, nome }
+async function buscarTimesESPN() {
+  const mapa = {};
+  for (const liga of LIGAS_ESPN) {
+    const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${liga}/teams`;
+    try {
+      const data = await fetchComRetry(url);
+      const times = data?.sports?.[0]?.leagues?.[0]?.teams || [];
+      for (const { team } of times) {
+        if (!team?.id || /^tbd/i.test(team.displayName || '')) continue;
+        let chave = chaveNome(team.displayName);
+        chave = APELIDOS_ESPN[chave] || chave;
+        if (!mapa[chave]) mapa[chave] = { espnId: team.id, liga, nomeEspn: team.displayName };
+      }
+      console.log(`   ✅ ${liga}: ${times.length} times`);
+    } catch (error) {
+      console.log(`   ❌ ${liga}: ${error.message}`);
+    }
+  }
+  return mapa;
+}
+
+function contarJogos(atleta) {
+  let jogos = 0;
+  const categorias = atleta?.statistics?.splits?.categories || [];
+  for (const c of categorias) {
+    for (const s of c.stats || []) {
+      if (s.name === 'appearances') jogos = parseInt(s.value, 10) || 0;
+    }
+  }
+  return jogos;
+}
+
+function lerCamisa(jersey) {
+  const t = String(jersey ?? '').trim();
+  return /^\d+$/.test(t) ? parseInt(t, 10) : null;
+}
+
+// Busca o elenco de um time e aplica o filtro. Retorna null se a resposta parecer incompleta.
+async function buscarElencoESPN(liga, espnId) {
+  const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${liga}/teams/${espnId}/roster`;
+  const data = await fetchComRetry(url);
+  const atletas = (data?.athletes || []).filter((a) => a?.id && a?.displayName);
+
+  if (atletas.length < MINIMO_JOGADORES_ESPN) {
+    console.log(`   ⚠️  Só ${atletas.length} jogadores na ESPN (mínimo ${MINIMO_JOGADORES_ESPN}) — resposta incompleta, mantendo o elenco anterior`);
+    return null;
+  }
+
+  const todos = atletas.map((a) => ({
+    id: parseInt(a.id, 10),
+    nome: a.displayName,
+    posicao: POSICOES[a.position?.abbreviation] || 'Midfielder',
+    numero: lerCamisa(a.jersey),
+    jogos: contarJogos(a),
+  }));
+
+  const maxJogos = Math.max(0, ...todos.map((j) => j.jogos));
+  let escolhidos;
+
+  if (maxJogos < JOGOS_PARA_FILTRAR) {
+    // Início de temporada: os jogos ainda não dizem nada, então fica o elenco inteiro
+    escolhidos = todos;
+    console.log(`   ℹ️  Ninguém com ${JOGOS_PARA_FILTRAR}+ jogos — sem filtro, elenco completo`);
+  } else {
+    // Fica quem jogou, ou quem usa camisa até 35 (contratado recente / machucado)
+    escolhidos = todos.filter((j) => j.jogos > 0 || (j.numero !== null && j.numero <= CAMISA_MAXIMA));
+
+    // Garante pelo menos 3 goleiros (os de camisa mais baixa primeiro)
+    const goleiros = escolhidos.filter((j) => j.posicao === 'Goalkeeper').length;
+    if (goleiros < MINIMO_GOLEIROS) {
+      const reservas = todos
+        .filter((j) => j.posicao === 'Goalkeeper' && !escolhidos.includes(j))
+        .sort((a, b) => (a.numero ?? 999) - (b.numero ?? 999))
+        .slice(0, MINIMO_GOLEIROS - goleiros);
+      escolhidos = escolhidos.concat(reservas);
+    }
+  }
+
+  console.log(`   ✅ ${escolhidos.length} jogadores (de ${todos.length} na ESPN)`);
+  return escolhidos.map(({ id, nome, posicao, numero }) => ({ id, nome, posicao, numero }));
+}
+
 // Função principal
 async function buscarTodosElencos() {
-  console.log('🚀 Iniciando busca de elencos...\n');
+  console.log('🚀 Iniciando busca de elencos (ESPN)...\n');
 
   // 1. Buscar CSV da planilha
   console.log('📋 Buscando lista de times da planilha...');
@@ -292,130 +285,89 @@ async function buscarTodosElencos() {
 
   let csvText;
   try {
-    csvText = await fetchHTTPS(csvUrl);
+    csvText = await fetchComRetry(csvUrl);
   } catch (error) {
     console.error('❌ Erro ao buscar CSV:', error.message);
     process.exit(1);
   }
 
-  const linhas = csvText.split('\n').map((l) => l.trim()).filter((l) => l);
-  
-  // Separar em Série A e Série B apenas
+  const linhas = String(csvText).split('\n').map((l) => l.trim()).filter((l) => l);
   const serieA = [];
   const serieB = [];
-  
-  // Pular primeira linha (cabeçalhos)
   for (let i = 1; i < linhas.length; i++) {
     const colunas = linhas[i].split(',').map((c) => c.trim());
     if (colunas[0]) serieA.push(colunas[0]);
     if (colunas[1]) serieB.push(colunas[1]);
     // Coluna 2 (Copa do Mundo) é ignorada aqui de propósito
   }
-  
-  // Juntar apenas Série A e Série B para a API
   const todosNomesTimes = [...serieA, ...serieB];
+  console.log(`   ✅ ${todosNomesTimes.length} times na planilha (Séries A e B)\n`);
 
-  console.log(`   ✅ ${todosNomesTimes.length} times encontrados na planilha (Apenas Séries A e B)`);
-  console.log(`   Times da planilha:`, todosNomesTimes);
+  // 2. Lista de times da ESPN
+  console.log('🌐 Buscando lista de times na ESPN...');
+  const timesESPN = await buscarTimesESPN();
   console.log();
 
-  // 2. Match com DB_TIMES para pegar IDs
-  console.log('🔍 Fazendo match com banco de dados...');
+  // 3. Planilha -> DB_TIMES -> ESPN
+  console.log('🔍 Fazendo match com banco de dados e ESPN...');
   const timesParaBuscar = [];
-  
   for (const nomeTime of todosNomesTimes) {
-    const nClean = removeAccents(nomeTime.toLowerCase().trim());
-    
-    for (const timeDb of DB_TIMES) {
-      const dbClean = removeAccents(timeDb.nome.toLowerCase().trim());
-      
-      // Match exato
-      if (dbClean === nClean) {
-        if (!timesParaBuscar.find(t => t.id === timeDb.id)) {
-          timesParaBuscar.push(timeDb);
-          console.log(`   ✅ Match: "${nomeTime}" → ${timeDb.nome} (ID: ${timeDb.id})`);
-        }
-        break;
-      }
+    const chave = chaveNome(nomeTime);
+    const timeDb = DB_TIMES.find((t) => chaveNome(t.nome) === chave);
+    if (!timeDb) {
+      console.log(`   ⚠️  "${nomeTime}" não está no DB_TIMES — ignorado`);
+      continue;
     }
+    if (timesParaBuscar.find((t) => t.id === timeDb.id)) continue;
+    const espn = timesESPN[chave];
+    if (!espn) {
+      console.log(`   ⚠️  "${nomeTime}" não encontrado na ESPN (${LIGAS_ESPN.join(', ')}) — mantém dados antigos`);
+      continue;
+    }
+    timesParaBuscar.push({ ...timeDb, ...espn });
+    console.log(`   ✅ "${nomeTime}" → ${timeDb.nome} (ID ${timeDb.id}) = ESPN ${espn.nomeEspn} (${espn.liga}/${espn.espnId})`);
   }
+  console.log(`   ✅ ${timesParaBuscar.length} times para buscar\n`);
 
-  console.log(`   ✅ ${timesParaBuscar.length} times encontrados no banco\n`);
-
-  // 3. Buscar elencos da API
+  // 4. Buscar elencos
   console.log(`⚽ Buscando elencos de ${timesParaBuscar.length} times...`);
-  console.log(`⚠️  Plano FREE: 10 requests/minuto`);
-  
-  const batchSize = 10;
-  const totalBatches = Math.ceil(timesParaBuscar.length / batchSize);
-  console.log(`📦 Dividindo em ${totalBatches} batches de ${batchSize} times`);
-  console.log(`⏱️  Tempo estimado: ~${totalBatches} minutos\n`);
-  
   const elencos = {};
   let sucessos = 0;
   let falhas = 0;
 
-  // Processar em batches de 10
-  for (let batch = 0; batch < totalBatches; batch++) {
-    const start = batch * batchSize;
-    const end = Math.min(start + batchSize, timesParaBuscar.length);
-    const batchTimes = timesParaBuscar.slice(start, end);
-    
-    console.log(`\n📦 BATCH ${batch + 1}/${totalBatches} (Times ${start + 1}-${end})\n`);
-    
-    // Processar cada time do batch
-    for (let i = 0; i < batchTimes.length; i++) {
-      const time = batchTimes[i];
-      const globalIndex = start + i;
-      
-      console.log(`[${globalIndex + 1}/${timesParaBuscar.length}] ${time.nome} (ID: ${time.id})`);
-
-      const elenco = await buscarElencoAPI(time.id);
-      
-      if (elenco.length > 0) {
+  for (let i = 0; i < timesParaBuscar.length; i++) {
+    const time = timesParaBuscar[i];
+    console.log(`[${i + 1}/${timesParaBuscar.length}] ${time.nome} (ID: ${time.id}, ESPN: ${time.espnId})`);
+    try {
+      const elenco = await buscarElencoESPN(time.liga, time.espnId);
+      if (elenco && elenco.length > 0) {
         elencos[time.id.toString()] = elenco;
         sucessos++;
       } else {
         falhas++;
       }
-
-      // Delay de 2s entre requests do mesmo batch
-      if (i < batchTimes.length - 1) {
-        await delay(2000);
-      }
+    } catch (error) {
+      console.log(`   ❌ Erro: ${error.message}`);
+      falhas++;
     }
-    
-    // Esperar 60 segundos antes do próximo batch (exceto no último)
-    if (batch < totalBatches - 1) {
-      console.log(`\n⏸️  Aguardando 60 segundos antes do próximo batch (rate limit FREE: 10 req/min)...\n`);
-      await delay(60000);
-    }
+    await delay(500); // gentileza com a API
   }
 
   console.log(`\n📊 Resumo:`);
   console.log(`   ✅ Sucessos: ${sucessos}`);
   console.log(`   ❌ Falhas: ${falhas}`);
-  console.log(`   📦 Total de times com elenco (nesta execução): ${Object.keys(elencos).length}`);
-
-  // 4. Verificar se houve falhas
   if (falhas > 0) {
-    console.log(`\n⚠️ ATENÇÃO: ${falhas} time(s) falharam!`);
-    console.log(`   O arquivo elencos.json será atualizado preservando os dados antigos dos times que falharam.\n`);
+    console.log(`\n⚠️ ATENÇÃO: ${falhas} time(s) falharam! Os dados antigos deles serão preservados.\n`);
   }
 
-  // 5. Salvar JSON
+  // 5. Salvar JSON (preservando times que falharam)
   console.log(`\n💾 Salvando arquivo elencos.json...`);
-  
   fs.mkdirSync('data', { recursive: true });
 
-  // --- NOVA LÓGICA DE PROTEÇÃO DE DADOS ---
   let elencosFinais = {};
-  
-  // Tenta ler o arquivo antigo para não perder dados de times que falharam agora
   if (fs.existsSync('data/elencos.json')) {
     try {
-      const arquivoAntigo = fs.readFileSync('data/elencos.json', 'utf8');
-      const jsonAntigo = JSON.parse(arquivoAntigo);
+      const jsonAntigo = JSON.parse(fs.readFileSync('data/elencos.json', 'utf8'));
       if (jsonAntigo && jsonAntigo.elencos) {
         elencosFinais = jsonAntigo.elencos;
         console.log(`   ✅ Recuperados dados anteriores de ${Object.keys(elencosFinais).length} times.`);
@@ -425,29 +377,27 @@ async function buscarTodosElencos() {
     }
   }
 
-  // Mescla os times que tiveram sucesso nesta execução com os dados antigos
   for (const [id, elencoAtualizado] of Object.entries(elencos)) {
     elencosFinais[id] = elencoAtualizado;
   }
-  // ----------------------------------------
-  
+
   const dadosFinais = {
     elencos: elencosFinais,
     ultima_atualizacao: new Date().toISOString(),
     total_times: Object.keys(elencosFinais).length,
   };
-  
-  fs.writeFileSync(
-    'data/elencos.json',
-    JSON.stringify(dadosFinais, null, 2),
-    'utf8'
-  );
 
+  fs.writeFileSync('data/elencos.json', JSON.stringify(dadosFinais, null, 2), 'utf8');
   console.log('   ✅ Arquivo salvo em data/elencos.json');
   console.log(`\n🎉 Processo concluído! Arquivo final contendo ${dadosFinais.total_times} times.\n`);
+
+  // Se nada deu certo, falha o job para você ser avisado pelo GitHub
+  if (sucessos === 0) {
+    console.error('❌ Nenhum elenco foi atualizado nesta execução.');
+    process.exit(1);
+  }
 }
 
-// Executar
 buscarTodosElencos().catch((error) => {
   console.error('\n❌ ERRO FATAL:', error);
   process.exit(1);
